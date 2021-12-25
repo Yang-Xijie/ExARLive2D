@@ -230,9 +230,9 @@
 			isa = PBXGroup;
 			children = (
 				483E28B62777671100D53495 /* README.md */,
-				483E28D127776C0100D53495 /* CubismSdkForNative-4-r.4 */,
+				483E28B82777673100D53495 /* Docs */,
 				483E28A1277766B500D53495 /* ExARLive2D */,
-				483E28C927776B9B00D53495 /* live2d-lib */,
+				483E28D127776C0100D53495 /* CubismSdkForNative-4-r.4 */,
 				483E28A0277766B500D53495 /* Products */,
 				4848A6D82777763900BA19EA /* Frameworks */,
 			);
@@ -250,7 +250,6 @@
 		483E28A1277766B500D53495 /* ExARLive2D */ = {
 			isa = PBXGroup;
 			children = (
-				483E28B82777673100D53495 /* Docs */,
 				4848A6F72777810700BA19EA /* Bridging */,
 				4848A6F8277781FE00BA19EA /* App */,
 				4848A6F127777D3E00BA19EA /* Main.storyboard */,
@@ -269,13 +268,6 @@
 				4848A6D72777744F00BA19EA /* LearningResources.md */,
 			);
 			path = Docs;
-			sourceTree = "<group>";
-		};
-		483E28C927776B9B00D53495 /* live2d-lib */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "live2d-lib";
 			sourceTree = "<group>";
 		};
 		483E28D127776C0100D53495 /* CubismSdkForNative-4-r.4 */ = {
