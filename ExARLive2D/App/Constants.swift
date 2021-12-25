@@ -1,17 +1,3 @@
-/**
- *
- * Constants.swift
- * ARKit-Live2D
- * Created by Yi Chen on 2020/3/21.
- *
- * Copyright (c) 2020, Yuki MIZUNO
- * All rights reserved.
- *
- * See LICENSE for license information
- *
- * SPDX-License-Identifier: BSD-3-Clause
- */
-
 import Foundation
 
 let FIRST_RUN = "FIRST_RUN"

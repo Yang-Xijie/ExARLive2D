@@ -4,7 +4,7 @@
 
 ## mzyy94/ARKit-Live2D
 
-Initial files including `AppDelegate.swift` `ViewController.swift` `SettingController.swift` `ContentUpdater.swift` `Constants.swift` are directly copied from [mzyy94/ARKit-Live2D](https://github.com/mzyy94/ARKit-Live2D) with [BSD 3-Clause "New" or "Revised" License](https://github.com/mzyy94/ARKit-Live2D/blob/master/LICENSE).
+Initial files including `AppDelegate.swift` `ViewController.swift` `SettingController.swift` `ContentUpdater.swift` `Constants.swift` `Live2D-binding.mm` `Live2D-binding.h` are directly copied from [mzyy94/ARKit-Live2D](https://github.com/mzyy94/ARKit-Live2D) with [BSD 3-Clause "New" or "Revised" License](https://github.com/mzyy94/ARKit-Live2D/blob/master/LICENSE).
 
 ## live2d model
 

@@ -1,17 +1,3 @@
-/**
- *
- * SettingController.swift
- * ARKit-Live2D
- * Created by Yi Chen on 2020/3/21.
- *
- * Copyright (c) 2020, Yuki MIZUNO
- * All rights reserved.
- *
- * See LICENSE for license information
- *
- * SPDX-License-Identifier: BSD-3-Clause
- */
-
 import UIKit
 
 class SettingController: UIViewController {
@@ -58,7 +44,7 @@ class SettingController: UIViewController {
                 let numberOnly = CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: text))
 
                 if numberOnly {
-                    guard let number: Float = Float(text) else {
+                    guard let number = Float(text) else {
                         fatalError("Fatal Error")
                     }
                     if !self.checkRange(value: number) {

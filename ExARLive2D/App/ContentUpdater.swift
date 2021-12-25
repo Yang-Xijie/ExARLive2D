@@ -1,17 +1,3 @@
-/**
- *
- * ContentUpdater.swift
- * ARKit-Live2D
- * Created by Yuki MIZUNO on 2017/11/14.
- *
- * Copyright (c) 2017, Yuki MIZUNO
- * All rights reserved.
- *
- * See LICENSE for license information
- *
- * SPDX-License-Identifier: BSD-3-Clause
- */
-
 import ARKit
 import SceneKit
 
@@ -29,13 +15,13 @@ class ContentUpdater: NSObject, ARSCNViewDelegate {
     func renderer(_: SCNSceneRenderer, didUpdate _: SCNNode, for anchor: ARAnchor) {
         guard let faceAnchor = anchor as? ARFaceAnchor else { return }
         guard let eyeBlinkLeft = faceAnchor.blendShapes[.eyeBlinkLeft] as? Float,
-            let eyeBlinkRight = faceAnchor.blendShapes[.eyeBlinkRight] as? Float,
-            let browInnerUp = faceAnchor.blendShapes[.browInnerUp] as? Float,
-            let browOuterUpLeft = faceAnchor.blendShapes[.browOuterUpLeft] as? Float,
-            let browOuterUpRight = faceAnchor.blendShapes[.browOuterUpRight] as? Float,
-            let mouthFunnel = faceAnchor.blendShapes[.mouthFunnel] as? Float,
-            let jawOpen = faceAnchor.blendShapes[.jawOpen] as? Float,
-            let cheekPuff = faceAnchor.blendShapes[.cheekPuff] as? Float
+              let eyeBlinkRight = faceAnchor.blendShapes[.eyeBlinkRight] as? Float,
+              let browInnerUp = faceAnchor.blendShapes[.browInnerUp] as? Float,
+              let browOuterUpLeft = faceAnchor.blendShapes[.browOuterUpLeft] as? Float,
+              let browOuterUpRight = faceAnchor.blendShapes[.browOuterUpRight] as? Float,
+              let mouthFunnel = faceAnchor.blendShapes[.mouthFunnel] as? Float,
+              let jawOpen = faceAnchor.blendShapes[.jawOpen] as? Float,
+              let cheekPuff = faceAnchor.blendShapes[.cheekPuff] as? Float
         else { return }
 
         let newFaceMatrix = SCNMatrix4(faceAnchor.transform)
