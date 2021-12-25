@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		483E28A3277766B500D53495 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E28A2277766B500D53495 /* AppDelegate.swift */; };
-		483E28A5277766B500D53495 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E28A4277766B500D53495 /* SceneDelegate.swift */; };
 		483E28A7277766B500D53495 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E28A6277766B500D53495 /* ViewController.swift */; };
-		483E28AA277766B500D53495 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483E28A8277766B500D53495 /* Main.storyboard */; };
 		483E28AC277766B700D53495 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 483E28AB277766B700D53495 /* Assets.xcassets */; };
 		483E28AF277766B700D53495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483E28AD277766B700D53495 /* LaunchScreen.storyboard */; };
 		483E297B27776C0100D53495 /* CubismFramework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 483E290C27776C0100D53495 /* CubismFramework.cpp */; };
@@ -50,6 +48,17 @@
 		483E299D27776C0200D53495 /* CubismId.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 483E296B27776C0100D53495 /* CubismId.cpp */; };
 		483E299E27776C0200D53495 /* CubismPhysicsJson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 483E297127776C0100D53495 /* CubismPhysicsJson.cpp */; };
 		483E299F27776C0200D53495 /* CubismPhysics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 483E297227776C0100D53495 /* CubismPhysics.cpp */; };
+		4848A6D92777763900BA19EA /* liblive2d-lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 483E28C827776B9B00D53495 /* liblive2d-lib.a */; };
+		4848A6DD2777771000BA19EA /* Live2D-binding.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4848A6DC2777771000BA19EA /* Live2D-binding.mm */; };
+		4848A6E027777C8300BA19EA /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4848A6DF27777C8300BA19EA /* SettingController.swift */; };
+		4848A6E227777C8800BA19EA /* ContentUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4848A6E127777C8800BA19EA /* ContentUpdater.swift */; };
+		4848A6E427777C8C00BA19EA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4848A6E327777C8C00BA19EA /* Constants.swift */; };
+		4848A6EC27777CBF00BA19EA /* hiyori_movie_pro_t01.physics3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4848A6E627777CBF00BA19EA /* hiyori_movie_pro_t01.physics3.json */; };
+		4848A6ED27777CBF00BA19EA /* hiyori_movie_pro_t01.cdi3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4848A6E727777CBF00BA19EA /* hiyori_movie_pro_t01.cdi3.json */; };
+		4848A6EE27777CBF00BA19EA /* hiyori_movie_pro_t01.model3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4848A6E827777CBF00BA19EA /* hiyori_movie_pro_t01.model3.json */; };
+		4848A6EF27777CBF00BA19EA /* texture_00.png in Resources */ = {isa = PBXBuildFile; fileRef = 4848A6EA27777CBF00BA19EA /* texture_00.png */; };
+		4848A6F027777CBF00BA19EA /* hiyori_movie_pro_t01.moc3 in Resources */ = {isa = PBXBuildFile; fileRef = 4848A6EB27777CBF00BA19EA /* hiyori_movie_pro_t01.moc3 */; };
+		4848A6F227777D3E00BA19EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4848A6F127777D3E00BA19EA /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,12 +76,9 @@
 /* Begin PBXFileReference section */
 		483E289F277766B500D53495 /* ExARLive2D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExARLive2D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		483E28A2277766B500D53495 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		483E28A4277766B500D53495 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		483E28A6277766B500D53495 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		483E28A9277766B500D53495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		483E28AB277766B700D53495 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		483E28AE277766B700D53495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		483E28B0277766B700D53495 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		483E28B62777671100D53495 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		483E28B72777672C00D53495 /* StartFromScratch.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = StartFromScratch.md; sourceTree = "<group>"; };
 		483E28C827776B9B00D53495 /* liblive2d-lib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "liblive2d-lib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +194,20 @@
 		483E297427776C0100D53495 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		483E297527776C0100D53495 /* NOTICE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = NOTICE.md; sourceTree = "<group>"; };
 		4848A6D72777744F00BA19EA /* LearningResources.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LearningResources.md; sourceTree = "<group>"; };
+		4848A6DA2777771000BA19EA /* ExARLive2D-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExARLive2D-Bridging-Header.h"; sourceTree = "<group>"; };
+		4848A6DB2777771000BA19EA /* Live2D-binding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Live2D-binding.h"; sourceTree = "<group>"; };
+		4848A6DC2777771000BA19EA /* Live2D-binding.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "Live2D-binding.mm"; sourceTree = "<group>"; };
+		4848A6DE277777C100BA19EA /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		4848A6DF27777C8300BA19EA /* SettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
+		4848A6E127777C8800BA19EA /* ContentUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentUpdater.swift; sourceTree = "<group>"; };
+		4848A6E327777C8C00BA19EA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4848A6E627777CBF00BA19EA /* hiyori_movie_pro_t01.physics3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_movie_pro_t01.physics3.json; sourceTree = "<group>"; };
+		4848A6E727777CBF00BA19EA /* hiyori_movie_pro_t01.cdi3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_movie_pro_t01.cdi3.json; sourceTree = "<group>"; };
+		4848A6E827777CBF00BA19EA /* hiyori_movie_pro_t01.model3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_movie_pro_t01.model3.json; sourceTree = "<group>"; };
+		4848A6EA27777CBF00BA19EA /* texture_00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture_00.png; sourceTree = "<group>"; };
+		4848A6EB27777CBF00BA19EA /* hiyori_movie_pro_t01.moc3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = hiyori_movie_pro_t01.moc3; sourceTree = "<group>"; };
+		4848A6F127777D3E00BA19EA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4848A6F527777F6000BA19EA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +215,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4848A6D92777763900BA19EA /* liblive2d-lib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +236,7 @@
 				483E28A1277766B500D53495 /* ExARLive2D */,
 				483E28C927776B9B00D53495 /* live2d-lib */,
 				483E28A0277766B500D53495 /* Products */,
+				4848A6D82777763900BA19EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -230,15 +252,22 @@
 		483E28A1277766B500D53495 /* ExARLive2D */ = {
 			isa = PBXGroup;
 			children = (
+				4848A6DE277777C100BA19EA /* Bridging-Header.h */,
+				4848A6DB2777771000BA19EA /* Live2D-binding.h */,
+				4848A6DC2777771000BA19EA /* Live2D-binding.mm */,
 				483E28A2277766B500D53495 /* AppDelegate.swift */,
-				483E28A4277766B500D53495 /* SceneDelegate.swift */,
 				483E28A6277766B500D53495 /* ViewController.swift */,
-				483E28A8277766B500D53495 /* Main.storyboard */,
+				4848A6DF27777C8300BA19EA /* SettingController.swift */,
+				4848A6E127777C8800BA19EA /* ContentUpdater.swift */,
+				4848A6E327777C8C00BA19EA /* Constants.swift */,
+				4848A6F127777D3E00BA19EA /* Main.storyboard */,
 				483E28AB277766B700D53495 /* Assets.xcassets */,
 				483E28AD277766B700D53495 /* LaunchScreen.storyboard */,
+				4848A6E527777CBF00BA19EA /* hiyori_movie_pro_t01 */,
 				483E28B82777673100D53495 /* docs */,
 				483E28B62777671100D53495 /* README.md */,
-				483E28B0277766B700D53495 /* Info.plist */,
+				4848A6F527777F6000BA19EA /* Info.plist */,
+				4848A6DA2777771000BA19EA /* ExARLive2D-Bridging-Header.h */,
 			);
 			path = ExARLive2D;
 			sourceTree = "<group>";
@@ -521,6 +550,33 @@
 			path = Physics;
 			sourceTree = "<group>";
 		};
+		4848A6D82777763900BA19EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4848A6E527777CBF00BA19EA /* hiyori_movie_pro_t01 */ = {
+			isa = PBXGroup;
+			children = (
+				4848A6E627777CBF00BA19EA /* hiyori_movie_pro_t01.physics3.json */,
+				4848A6E727777CBF00BA19EA /* hiyori_movie_pro_t01.cdi3.json */,
+				4848A6E827777CBF00BA19EA /* hiyori_movie_pro_t01.model3.json */,
+				4848A6E927777CBF00BA19EA /* hiyori_movie_pro_t01.2048 */,
+				4848A6EB27777CBF00BA19EA /* hiyori_movie_pro_t01.moc3 */,
+			);
+			path = hiyori_movie_pro_t01;
+			sourceTree = "<group>";
+		};
+		4848A6E927777CBF00BA19EA /* hiyori_movie_pro_t01.2048 */ = {
+			isa = PBXGroup;
+			children = (
+				4848A6EA27777CBF00BA19EA /* texture_00.png */,
+			);
+			path = hiyori_movie_pro_t01.2048;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -570,6 +626,7 @@
 				TargetAttributes = {
 					483E289E277766B500D53495 = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
 					483E28C727776B9B00D53495 = {
 						CreatedOnToolsVersion = 13.1;
@@ -600,9 +657,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4848A6F027777CBF00BA19EA /* hiyori_movie_pro_t01.moc3 in Resources */,
 				483E28AF277766B700D53495 /* LaunchScreen.storyboard in Resources */,
+				4848A6EC27777CBF00BA19EA /* hiyori_movie_pro_t01.physics3.json in Resources */,
+				4848A6F227777D3E00BA19EA /* Main.storyboard in Resources */,
 				483E28AC277766B700D53495 /* Assets.xcassets in Resources */,
-				483E28AA277766B500D53495 /* Main.storyboard in Resources */,
+				4848A6EF27777CBF00BA19EA /* texture_00.png in Resources */,
+				4848A6ED27777CBF00BA19EA /* hiyori_movie_pro_t01.cdi3.json in Resources */,
+				4848A6EE27777CBF00BA19EA /* hiyori_movie_pro_t01.model3.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,9 +675,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4848A6E027777C8300BA19EA /* SettingController.swift in Sources */,
 				483E28A7277766B500D53495 /* ViewController.swift in Sources */,
 				483E28A3277766B500D53495 /* AppDelegate.swift in Sources */,
-				483E28A5277766B500D53495 /* SceneDelegate.swift in Sources */,
+				4848A6E227777C8800BA19EA /* ContentUpdater.swift in Sources */,
+				4848A6E427777C8C00BA19EA /* Constants.swift in Sources */,
+				4848A6DD2777771000BA19EA /* Live2D-binding.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,14 +731,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		483E28A8277766B500D53495 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				483E28A9277766B500D53495 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		483E28AD277766B700D53495 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -806,10 +863,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C4W6UUH267;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					L2D_TARGET_IPHONE_ES2,
+				);
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/CubismSdkForNative-4-r.4/Core/include",
+					"$(SRCROOT)/CubismSdkForNative-4-r.4/Framework/src",
+				);
 				INFOPLIST_FILE = ExARLive2D/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -820,10 +886,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/CubismSdkForNative-4-r.4/Core/lib/ios/$(CONFIGURATION)-$(PLATFORM_NAME)\"";
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-lLive2DCubismCore";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yangxijie.ExARLive2D;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -834,10 +904,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C4W6UUH267;
+				GCC_PREPROCESSOR_DEFINITIONS = L2D_TARGET_IPHONE_ES2;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/CubismSdkForNative-4-r.4/Core/include",
+					"$(SRCROOT)/CubismSdkForNative-4-r.4/Framework/src",
+				);
 				INFOPLIST_FILE = ExARLive2D/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -848,10 +924,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/CubismSdkForNative-4-r.4/Core/lib/ios/$(CONFIGURATION)-$(PLATFORM_NAME)\"";
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-lLive2DCubismCore";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yangxijie.ExARLive2D;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

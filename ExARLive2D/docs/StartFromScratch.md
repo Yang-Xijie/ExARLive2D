@@ -49,7 +49,7 @@ Add `$(SRCROOT)/CubismSdkForNative-4-r.4/Core/include`(non-recursive) and `$(SRC
 Rebuild and get error `Unknown type name 'Gluint'`
 
 7. Add compile macros.
-`Targets - live2d-lib - build settings - Apple Clang -> Preprocessing -> Preprocessor Macros`
+`Targets -> live2d-lib -> build settings -> Apple Clang -> Preprocessing -> Preprocessor Macros`
 Debug: `CSM_TARGET_IPHONE_ES2` `DEBUG=1`
 Release: `CSM_TARGET_IPHONE_ES2`
 Build and find it works!!
@@ -63,11 +63,22 @@ Build and only get 18 issues, just ignore them.
 
 # Configure the Project
 
+1. Add static library.
+In `Targets -> ExARLive2D (project name) -> Build Phases -> Link Binary With Libraries`, add `liblive2d-lib.a`
 
+2. Add search path.
+`Targets -> live2d-lib -> build settings -> search path -> Header Search Paths`
+Add `$(SRCROOT)/CubismSdkForNative-4-r.4/Core/include`(non-recursive) and `$(SRCROOT)/CubismSdkForNative-4-r.4/Framework/src`(non-recursive).
 
+3. Add `Live2D-binding.h` `Live2D-binding.mm` `Bridging-Header.h` from ARKit-Live2D to `ExARLive2D/`. No need to `Create Bridging Header`.
+In `Targets -> ExARLive2D -> Build Settings -> Objective-C Bridging Header` add `$(PROJECT_DIR)/$(PROJECT_NAME)/Bridging-Header.h`.
 
+4. In `Targets -> ExARLive2D -> Build Settings -> Linking -> Other Linker Flags` add `-lLive2DCubismCore`
+and in `Targets -> ExARLive2D -> Build Settings -> Library search path` add  `$(SRCROOT)/CubismSdkForNative-4-r.4/Core/lib/ios/$(CONFIGURATION)-$(PLATFORM_NAME)`
 
+5. Copy all files and it should build.
 
+6. Set the `Info.plist`.
 
 - - - 
 
