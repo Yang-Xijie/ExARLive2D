@@ -93,12 +93,10 @@
 		483E290327776C0100D53495 /* cubism-info.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = "cubism-info.yml"; sourceTree = "<group>"; };
 		483E290427776C0100D53495 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		483E290627776C0100D53495 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
-		483E290727776C0100D53495 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		483E290827776C0100D53495 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		483E290927776C0100D53495 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		483E290B27776C0100D53495 /* CubismDefaultParameterId.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismDefaultParameterId.hpp; sourceTree = "<group>"; };
 		483E290C27776C0100D53495 /* CubismFramework.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismFramework.cpp; sourceTree = "<group>"; };
-		483E290D27776C0100D53495 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		483E290E27776C0100D53495 /* CubismJsonHolder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismJsonHolder.hpp; sourceTree = "<group>"; };
 		483E290F27776C0100D53495 /* ICubismModelSetting.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ICubismModelSetting.hpp; sourceTree = "<group>"; };
 		483E291027776C0100D53495 /* CubismModelSettingJson.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismModelSettingJson.cpp; sourceTree = "<group>"; };
@@ -291,13 +289,13 @@
 		483E28D127776C0100D53495 /* CubismSdkForNative-4-r.4 */ = {
 			isa = PBXGroup;
 			children = (
-				483E28D227776C0100D53495 /* LICENSE.md */,
-				483E28D327776C0100D53495 /* Core */,
-				483E290327776C0100D53495 /* cubism-info.yml */,
-				483E290427776C0100D53495 /* CHANGELOG.md */,
-				483E290527776C0100D53495 /* Framework */,
 				483E297427776C0100D53495 /* README.md */,
 				483E297527776C0100D53495 /* NOTICE.md */,
+				483E28D227776C0100D53495 /* LICENSE.md */,
+				483E290427776C0100D53495 /* CHANGELOG.md */,
+				483E290327776C0100D53495 /* cubism-info.yml */,
+				483E28D327776C0100D53495 /* Core */,
+				483E290527776C0100D53495 /* Framework */,
 			);
 			path = "CubismSdkForNative-4-r.4";
 			sourceTree = "<group>";
@@ -305,11 +303,11 @@
 		483E28D327776C0100D53495 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				483E28D427776C0100D53495 /* RedistributableFiles.txt */,
+				483E28D927776C0100D53495 /* README.md */,
 				483E28D527776C0100D53495 /* LICENSE.md */,
 				483E28D627776C0100D53495 /* CHANGELOG.md */,
+				483E28D427776C0100D53495 /* RedistributableFiles.txt */,
 				483E28D727776C0100D53495 /* include */,
-				483E28D927776C0100D53495 /* README.md */,
 				483E28DA27776C0100D53495 /* lib */,
 			);
 			path = Core;
@@ -359,10 +357,9 @@
 		483E290527776C0100D53495 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				483E290627776C0100D53495 /* LICENSE.md */,
-				483E290727776C0100D53495 /* CMakeLists.txt */,
-				483E290827776C0100D53495 /* CHANGELOG.md */,
 				483E290927776C0100D53495 /* README.md */,
+				483E290627776C0100D53495 /* LICENSE.md */,
+				483E290827776C0100D53495 /* CHANGELOG.md */,
 				483E290A27776C0100D53495 /* src */,
 			);
 			path = Framework;
@@ -372,28 +369,27 @@
 			isa = PBXGroup;
 			children = (
 				483E290B27776C0100D53495 /* CubismDefaultParameterId.hpp */,
+				483E296527776C0100D53495 /* CubismDefaultParameterId.cpp */,
+				483E297327776C0100D53495 /* CubismFramework.hpp */,
 				483E290C27776C0100D53495 /* CubismFramework.cpp */,
-				483E290D27776C0100D53495 /* CMakeLists.txt */,
+				483E291027776C0100D53495 /* CubismModelSettingJson.cpp */,
+				483E294C27776C0100D53495 /* CubismModelSettingJson.hpp */,
+				483E294E27776C0100D53495 /* CubismCdiJson.hpp */,
+				483E291A27776C0100D53495 /* CubismCdiJson.cpp */,
+				483E294D27776C0100D53495 /* CubismFrameworkConfig.hpp */,
 				483E290E27776C0100D53495 /* CubismJsonHolder.hpp */,
 				483E290F27776C0100D53495 /* ICubismModelSetting.hpp */,
-				483E291027776C0100D53495 /* CubismModelSettingJson.cpp */,
 				483E291127776C0100D53495 /* ICubismAllocator.hpp */,
-				483E291227776C0100D53495 /* Effect */,
-				483E291A27776C0100D53495 /* CubismCdiJson.cpp */,
-				483E291B27776C0100D53495 /* Utils */,
-				483E292327776C0100D53495 /* Motion */,
-				483E293427776C0100D53495 /* Math */,
 				483E294227776C0100D53495 /* Live2DCubismCore.hpp */,
-				483E294327776C0100D53495 /* Type */,
-				483E294C27776C0100D53495 /* CubismModelSettingJson.hpp */,
-				483E294D27776C0100D53495 /* CubismFrameworkConfig.hpp */,
-				483E294E27776C0100D53495 /* CubismCdiJson.hpp */,
-				483E294F27776C0100D53495 /* Model */,
-				483E295B27776C0100D53495 /* Rendering */,
-				483E296527776C0100D53495 /* CubismDefaultParameterId.cpp */,
+				483E291227776C0100D53495 /* Effect */,
 				483E296627776C0100D53495 /* Id */,
+				483E293427776C0100D53495 /* Math */,
+				483E294F27776C0100D53495 /* Model */,
+				483E292327776C0100D53495 /* Motion */,
 				483E296C27776C0100D53495 /* Physics */,
-				483E297327776C0100D53495 /* CubismFramework.hpp */,
+				483E295B27776C0100D53495 /* Rendering */,
+				483E294327776C0100D53495 /* Type */,
+				483E291B27776C0100D53495 /* Utils */,
 			);
 			path = src;
 			sourceTree = "<group>";
