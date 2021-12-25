@@ -111,11 +111,11 @@ class ViewController: GLKViewController {
         })
 
         let toggleSceneView = UIAlertAction(title: sceneView.isHidden ? "Show Front View" : "Hide Front View", style: .default, handler: { _ in
-            self.sceneView.isHidden = !self.sceneView.isHidden
+            self.sceneView.isHidden.toggle()
         })
 
-        let setting = UIAlertAction(title: "Setting", style: .default, handler: { _ in
-            self.present(SettingController(), animated: true, completion: nil)
+        let setting = UIAlertAction(title: "Settings", style: .default, handler: { _ in
+            self.present(SettingController(), animated: false, completion: nil)
         })
 
         let actionSheet = UIAlertController(title: "Option", message: nil, preferredStyle: .actionSheet)
@@ -196,16 +196,16 @@ class ViewController: GLKViewController {
         _ = updateFrame()
     }
 
-    fileprivate func setupSizeAndPosition() {
+    private func setupSizeAndPosition() {
         let size = UIScreen.main.bounds.size
         let defaults = UserDefaults.standard
 
-        let zoom: Float = defaults.float(forKey: ZOOM)
+        let zoom: Float = defaults.float(forKey: SETTINGS.key.ZOOM)
 
         let scx: Float = (Float)(5.6 / live2DModel.getCanvasWidth()) * zoom
         let scy: Float = (Float)(5.6 / live2DModel.getCanvasWidth() * (Float)(size.width / size.height)) * zoom
-        let x: Float = defaults.float(forKey: X_POS)
-        let y: Float = defaults.float(forKey: Y_POS)
+        let x: Float = defaults.float(forKey: SETTINGS.key.X)
+        let y: Float = defaults.float(forKey: SETTINGS.key.Y)
 
         let matrix4 = SCNMatrix4(
             m11: scx, m12: 0, m13: 0, m14: 0,
@@ -227,13 +227,11 @@ class ViewController: GLKViewController {
     override func glkView(_: GLKView, drawIn _: CGRect) {
         setupSizeAndPosition()
 
-        var rgb: [Float] = [0.0, 0.0, 0.0]
-        let defaults = UserDefaults.standard
-        for i in 0 ... 2 {
-            rgb[i] = defaults.float(forKey: colorKeys[i])
-        }
+        let r = UserDefaults.standard.integer(forKey: SETTINGS.key.RED)
+        let g = UserDefaults.standard.integer(forKey: SETTINGS.key.GREEN)
+        let b = UserDefaults.standard.integer(forKey: SETTINGS.key.BLUE)
 
-        glClearColor(rgb[0], rgb[1], rgb[2], 1.0)
+        glClearColor(Float(r) / 255, Float(g) / 255, Float(b) / 255, 1.0)
         glClear(GLbitfield(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT))
 
         let delta = updateFrame()

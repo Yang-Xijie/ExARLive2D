@@ -52,7 +52,7 @@
 		4848A6DD2777771000BA19EA /* Live2D-binding.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4848A6DC2777771000BA19EA /* Live2D-binding.mm */; };
 		4848A6E027777C8300BA19EA /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4848A6DF27777C8300BA19EA /* SettingController.swift */; };
 		4848A6E227777C8800BA19EA /* ContentUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4848A6E127777C8800BA19EA /* ContentUpdater.swift */; };
-		4848A6E427777C8C00BA19EA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4848A6E327777C8C00BA19EA /* Constants.swift */; };
+		4848A6E427777C8C00BA19EA /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4848A6E327777C8C00BA19EA /* Settings.swift */; };
 		4848A6F227777D3E00BA19EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4848A6F127777D3E00BA19EA /* Main.storyboard */; };
 		4848A70D2777884A00BA19EA /* texture_00.png in Resources */ = {isa = PBXBuildFile; fileRef = 4848A6FB2777884A00BA19EA /* texture_00.png */; };
 		4848A70E2777884A00BA19EA /* texture_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 4848A6FC2777884A00BA19EA /* texture_01.png */; };
@@ -209,7 +209,7 @@
 		4848A6DE277777C100BA19EA /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		4848A6DF27777C8300BA19EA /* SettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		4848A6E127777C8800BA19EA /* ContentUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentUpdater.swift; sourceTree = "<group>"; };
-		4848A6E327777C8C00BA19EA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4848A6E327777C8C00BA19EA /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		4848A6F127777D3E00BA19EA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4848A6F527777F6000BA19EA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4848A6FB2777884A00BA19EA /* texture_00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture_00.png; sourceTree = "<group>"; };
@@ -578,7 +578,7 @@
 				483E28A6277766B500D53495 /* ViewController.swift */,
 				4848A6DF27777C8300BA19EA /* SettingController.swift */,
 				4848A6E127777C8800BA19EA /* ContentUpdater.swift */,
-				4848A6E327777C8C00BA19EA /* Constants.swift */,
+				4848A6E327777C8C00BA19EA /* Settings.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -737,7 +737,7 @@
 				483E28A7277766B500D53495 /* ViewController.swift in Sources */,
 				483E28A3277766B500D53495 /* AppDelegate.swift in Sources */,
 				4848A6E227777C8800BA19EA /* ContentUpdater.swift in Sources */,
-				4848A6E427777C8C00BA19EA /* Constants.swift in Sources */,
+				4848A6E427777C8C00BA19EA /* Settings.swift in Sources */,
 				4848A6DD2777771000BA19EA /* Live2D-binding.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
