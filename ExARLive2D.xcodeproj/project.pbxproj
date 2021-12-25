@@ -53,12 +53,24 @@
 		4848A6E027777C8300BA19EA /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4848A6DF27777C8300BA19EA /* SettingController.swift */; };
 		4848A6E227777C8800BA19EA /* ContentUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4848A6E127777C8800BA19EA /* ContentUpdater.swift */; };
 		4848A6E427777C8C00BA19EA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4848A6E327777C8C00BA19EA /* Constants.swift */; };
-		4848A6EC27777CBF00BA19EA /* hiyori_movie_pro_t01.physics3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4848A6E627777CBF00BA19EA /* hiyori_movie_pro_t01.physics3.json */; };
-		4848A6ED27777CBF00BA19EA /* hiyori_movie_pro_t01.cdi3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4848A6E727777CBF00BA19EA /* hiyori_movie_pro_t01.cdi3.json */; };
-		4848A6EE27777CBF00BA19EA /* hiyori_movie_pro_t01.model3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4848A6E827777CBF00BA19EA /* hiyori_movie_pro_t01.model3.json */; };
-		4848A6EF27777CBF00BA19EA /* texture_00.png in Resources */ = {isa = PBXBuildFile; fileRef = 4848A6EA27777CBF00BA19EA /* texture_00.png */; };
-		4848A6F027777CBF00BA19EA /* hiyori_movie_pro_t01.moc3 in Resources */ = {isa = PBXBuildFile; fileRef = 4848A6EB27777CBF00BA19EA /* hiyori_movie_pro_t01.moc3 */; };
 		4848A6F227777D3E00BA19EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4848A6F127777D3E00BA19EA /* Main.storyboard */; };
+		4848A70D2777884A00BA19EA /* texture_00.png in Resources */ = {isa = PBXBuildFile; fileRef = 4848A6FB2777884A00BA19EA /* texture_00.png */; };
+		4848A70E2777884A00BA19EA /* texture_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 4848A6FC2777884A00BA19EA /* texture_01.png */; };
+		4848A70F2777884A00BA19EA /* hiyori_pro_t10.pose3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4848A6FD2777884A00BA19EA /* hiyori_pro_t10.pose3.json */; };
+		4848A7102777884A00BA19EA /* hiyori_m01.motion3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4848A6FF2777884A00BA19EA /* hiyori_m01.motion3.json */; };
+		4848A7112777884A00BA19EA /* hiyori_m06.motion3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4848A7002777884A00BA19EA /* hiyori_m06.motion3.json */; };
+		4848A7122777884A00BA19EA /* hiyori_m07.motion3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4848A7012777884A00BA19EA /* hiyori_m07.motion3.json */; };
+		4848A7132777884A00BA19EA /* hiyori_m09.motion3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4848A7022777884A00BA19EA /* hiyori_m09.motion3.json */; };
+		4848A7142777884A00BA19EA /* hiyori_m08.motion3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4848A7032777884A00BA19EA /* hiyori_m08.motion3.json */; };
+		4848A7152777884A00BA19EA /* hiyori_m10.motion3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4848A7042777884A00BA19EA /* hiyori_m10.motion3.json */; };
+		4848A7162777884A00BA19EA /* hiyori_m02.motion3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4848A7052777884A00BA19EA /* hiyori_m02.motion3.json */; };
+		4848A7172777884A00BA19EA /* hiyori_m05.motion3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4848A7062777884A00BA19EA /* hiyori_m05.motion3.json */; };
+		4848A7182777884A00BA19EA /* hiyori_m04.motion3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4848A7072777884A00BA19EA /* hiyori_m04.motion3.json */; };
+		4848A7192777884A00BA19EA /* hiyori_m03.motion3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4848A7082777884A00BA19EA /* hiyori_m03.motion3.json */; };
+		4848A71A2777884A00BA19EA /* hiyori_pro_t10.moc3 in Resources */ = {isa = PBXBuildFile; fileRef = 4848A7092777884A00BA19EA /* hiyori_pro_t10.moc3 */; };
+		4848A71B2777884A00BA19EA /* hiyori_pro_t10.cdi3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4848A70A2777884A00BA19EA /* hiyori_pro_t10.cdi3.json */; };
+		4848A71C2777884A00BA19EA /* hiyori_pro_t10.model3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4848A70B2777884A00BA19EA /* hiyori_pro_t10.model3.json */; };
+		4848A71D2777884A00BA19EA /* hiyori_pro_t10.physics3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4848A70C2777884A00BA19EA /* hiyori_pro_t10.physics3.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -198,13 +210,25 @@
 		4848A6DF27777C8300BA19EA /* SettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		4848A6E127777C8800BA19EA /* ContentUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentUpdater.swift; sourceTree = "<group>"; };
 		4848A6E327777C8C00BA19EA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		4848A6E627777CBF00BA19EA /* hiyori_movie_pro_t01.physics3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_movie_pro_t01.physics3.json; sourceTree = "<group>"; };
-		4848A6E727777CBF00BA19EA /* hiyori_movie_pro_t01.cdi3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_movie_pro_t01.cdi3.json; sourceTree = "<group>"; };
-		4848A6E827777CBF00BA19EA /* hiyori_movie_pro_t01.model3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_movie_pro_t01.model3.json; sourceTree = "<group>"; };
-		4848A6EA27777CBF00BA19EA /* texture_00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture_00.png; sourceTree = "<group>"; };
-		4848A6EB27777CBF00BA19EA /* hiyori_movie_pro_t01.moc3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = hiyori_movie_pro_t01.moc3; sourceTree = "<group>"; };
 		4848A6F127777D3E00BA19EA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4848A6F527777F6000BA19EA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4848A6FB2777884A00BA19EA /* texture_00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture_00.png; sourceTree = "<group>"; };
+		4848A6FC2777884A00BA19EA /* texture_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture_01.png; sourceTree = "<group>"; };
+		4848A6FD2777884A00BA19EA /* hiyori_pro_t10.pose3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_pro_t10.pose3.json; sourceTree = "<group>"; };
+		4848A6FF2777884A00BA19EA /* hiyori_m01.motion3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_m01.motion3.json; sourceTree = "<group>"; };
+		4848A7002777884A00BA19EA /* hiyori_m06.motion3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_m06.motion3.json; sourceTree = "<group>"; };
+		4848A7012777884A00BA19EA /* hiyori_m07.motion3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_m07.motion3.json; sourceTree = "<group>"; };
+		4848A7022777884A00BA19EA /* hiyori_m09.motion3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_m09.motion3.json; sourceTree = "<group>"; };
+		4848A7032777884A00BA19EA /* hiyori_m08.motion3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_m08.motion3.json; sourceTree = "<group>"; };
+		4848A7042777884A00BA19EA /* hiyori_m10.motion3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_m10.motion3.json; sourceTree = "<group>"; };
+		4848A7052777884A00BA19EA /* hiyori_m02.motion3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_m02.motion3.json; sourceTree = "<group>"; };
+		4848A7062777884A00BA19EA /* hiyori_m05.motion3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_m05.motion3.json; sourceTree = "<group>"; };
+		4848A7072777884A00BA19EA /* hiyori_m04.motion3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_m04.motion3.json; sourceTree = "<group>"; };
+		4848A7082777884A00BA19EA /* hiyori_m03.motion3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_m03.motion3.json; sourceTree = "<group>"; };
+		4848A7092777884A00BA19EA /* hiyori_pro_t10.moc3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = hiyori_pro_t10.moc3; sourceTree = "<group>"; };
+		4848A70A2777884A00BA19EA /* hiyori_pro_t10.cdi3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_pro_t10.cdi3.json; sourceTree = "<group>"; };
+		4848A70B2777884A00BA19EA /* hiyori_pro_t10.model3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_pro_t10.model3.json; sourceTree = "<group>"; };
+		4848A70C2777884A00BA19EA /* hiyori_pro_t10.physics3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_pro_t10.physics3.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,7 +280,7 @@
 				483E28AD277766B700D53495 /* LaunchScreen.storyboard */,
 				4848A6F527777F6000BA19EA /* Info.plist */,
 				483E28AB277766B700D53495 /* Assets.xcassets */,
-				4848A6E527777CBF00BA19EA /* hiyori_movie_pro_t01 */,
+				4848A6F92777884A00BA19EA /* hiyori_pro_jp */,
 			);
 			path = ExARLive2D;
 			sourceTree = "<group>";
@@ -537,26 +561,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4848A6E527777CBF00BA19EA /* hiyori_movie_pro_t01 */ = {
-			isa = PBXGroup;
-			children = (
-				4848A6E627777CBF00BA19EA /* hiyori_movie_pro_t01.physics3.json */,
-				4848A6E727777CBF00BA19EA /* hiyori_movie_pro_t01.cdi3.json */,
-				4848A6E827777CBF00BA19EA /* hiyori_movie_pro_t01.model3.json */,
-				4848A6E927777CBF00BA19EA /* hiyori_movie_pro_t01.2048 */,
-				4848A6EB27777CBF00BA19EA /* hiyori_movie_pro_t01.moc3 */,
-			);
-			path = hiyori_movie_pro_t01;
-			sourceTree = "<group>";
-		};
-		4848A6E927777CBF00BA19EA /* hiyori_movie_pro_t01.2048 */ = {
-			isa = PBXGroup;
-			children = (
-				4848A6EA27777CBF00BA19EA /* texture_00.png */,
-			);
-			path = hiyori_movie_pro_t01.2048;
-			sourceTree = "<group>";
-		};
 		4848A6F72777810700BA19EA /* Bridging */ = {
 			isa = PBXGroup;
 			children = (
@@ -577,6 +581,46 @@
 				4848A6E327777C8C00BA19EA /* Constants.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		4848A6F92777884A00BA19EA /* hiyori_pro_jp */ = {
+			isa = PBXGroup;
+			children = (
+				4848A70B2777884A00BA19EA /* hiyori_pro_t10.model3.json */,
+				4848A70C2777884A00BA19EA /* hiyori_pro_t10.physics3.json */,
+				4848A6FD2777884A00BA19EA /* hiyori_pro_t10.pose3.json */,
+				4848A70A2777884A00BA19EA /* hiyori_pro_t10.cdi3.json */,
+				4848A7092777884A00BA19EA /* hiyori_pro_t10.moc3 */,
+				4848A6FA2777884A00BA19EA /* hiyori_pro_t10.2048 */,
+				4848A6FE2777884A00BA19EA /* motion */,
+			);
+			path = hiyori_pro_jp;
+			sourceTree = "<group>";
+		};
+		4848A6FA2777884A00BA19EA /* hiyori_pro_t10.2048 */ = {
+			isa = PBXGroup;
+			children = (
+				4848A6FB2777884A00BA19EA /* texture_00.png */,
+				4848A6FC2777884A00BA19EA /* texture_01.png */,
+			);
+			path = hiyori_pro_t10.2048;
+			sourceTree = "<group>";
+		};
+		4848A6FE2777884A00BA19EA /* motion */ = {
+			isa = PBXGroup;
+			children = (
+				4848A6FF2777884A00BA19EA /* hiyori_m01.motion3.json */,
+				4848A7002777884A00BA19EA /* hiyori_m06.motion3.json */,
+				4848A7012777884A00BA19EA /* hiyori_m07.motion3.json */,
+				4848A7022777884A00BA19EA /* hiyori_m09.motion3.json */,
+				4848A7032777884A00BA19EA /* hiyori_m08.motion3.json */,
+				4848A7042777884A00BA19EA /* hiyori_m10.motion3.json */,
+				4848A7052777884A00BA19EA /* hiyori_m02.motion3.json */,
+				4848A7062777884A00BA19EA /* hiyori_m05.motion3.json */,
+				4848A7072777884A00BA19EA /* hiyori_m04.motion3.json */,
+				4848A7082777884A00BA19EA /* hiyori_m03.motion3.json */,
+			);
+			path = motion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -659,14 +703,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4848A6F027777CBF00BA19EA /* hiyori_movie_pro_t01.moc3 in Resources */,
+				4848A71D2777884A00BA19EA /* hiyori_pro_t10.physics3.json in Resources */,
 				483E28AF277766B700D53495 /* LaunchScreen.storyboard in Resources */,
-				4848A6EC27777CBF00BA19EA /* hiyori_movie_pro_t01.physics3.json in Resources */,
+				4848A7172777884A00BA19EA /* hiyori_m05.motion3.json in Resources */,
+				4848A70E2777884A00BA19EA /* texture_01.png in Resources */,
+				4848A7182777884A00BA19EA /* hiyori_m04.motion3.json in Resources */,
+				4848A70D2777884A00BA19EA /* texture_00.png in Resources */,
+				4848A7132777884A00BA19EA /* hiyori_m09.motion3.json in Resources */,
+				4848A71A2777884A00BA19EA /* hiyori_pro_t10.moc3 in Resources */,
+				4848A71C2777884A00BA19EA /* hiyori_pro_t10.model3.json in Resources */,
 				4848A6F227777D3E00BA19EA /* Main.storyboard in Resources */,
+				4848A7112777884A00BA19EA /* hiyori_m06.motion3.json in Resources */,
+				4848A7102777884A00BA19EA /* hiyori_m01.motion3.json in Resources */,
+				4848A7192777884A00BA19EA /* hiyori_m03.motion3.json in Resources */,
+				4848A71B2777884A00BA19EA /* hiyori_pro_t10.cdi3.json in Resources */,
+				4848A7122777884A00BA19EA /* hiyori_m07.motion3.json in Resources */,
+				4848A7142777884A00BA19EA /* hiyori_m08.motion3.json in Resources */,
 				483E28AC277766B700D53495 /* Assets.xcassets in Resources */,
-				4848A6EF27777CBF00BA19EA /* texture_00.png in Resources */,
-				4848A6ED27777CBF00BA19EA /* hiyori_movie_pro_t01.cdi3.json in Resources */,
-				4848A6EE27777CBF00BA19EA /* hiyori_movie_pro_t01.model3.json in Resources */,
+				4848A7162777884A00BA19EA /* hiyori_m02.motion3.json in Resources */,
+				4848A70F2777884A00BA19EA /* hiyori_pro_t10.pose3.json in Resources */,
+				4848A7152777884A00BA19EA /* hiyori_m10.motion3.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

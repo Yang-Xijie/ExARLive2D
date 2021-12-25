@@ -2,7 +2,7 @@
 	"Version": 3,
 	"Meta": {
 		"PhysicsSettingCount": 11,
-		"TotalInputCount": 41,
+		"TotalInputCount": 34,
 		"TotalOutputCount": 35,
 		"VertexCount": 58,
 		"EffectiveForces": {
@@ -71,7 +71,7 @@
 						"Target": "Parameter",
 						"Id": "ParamAngleX"
 					},
-					"Weight": 20,
+					"Weight": 60,
 					"Type": "X",
 					"Reflect": false
 				},
@@ -89,7 +89,7 @@
 						"Target": "Parameter",
 						"Id": "ParamBodyAngleX"
 					},
-					"Weight": 20,
+					"Weight": 40,
 					"Type": "X",
 					"Reflect": false
 				},
@@ -100,15 +100,6 @@
 					},
 					"Weight": 40,
 					"Type": "Angle",
-					"Reflect": false
-				},
-				{
-					"Source": {
-						"Target": "Parameter",
-						"Id": "ParamBodyPosition"
-					},
-					"Weight": 20,
-					"Type": "X",
 					"Reflect": false
 				}
 			],
@@ -168,7 +159,7 @@
 						"Target": "Parameter",
 						"Id": "ParamAngleX"
 					},
-					"Weight": 10,
+					"Weight": 60,
 					"Type": "X",
 					"Reflect": false
 				},
@@ -186,7 +177,7 @@
 						"Target": "Parameter",
 						"Id": "ParamBodyAngleX"
 					},
-					"Weight": 10,
+					"Weight": 40,
 					"Type": "X",
 					"Reflect": false
 				},
@@ -197,15 +188,6 @@
 					},
 					"Weight": 40,
 					"Type": "Angle",
-					"Reflect": false
-				},
-				{
-					"Source": {
-						"Target": "Parameter",
-						"Id": "ParamBodyPosition"
-					},
-					"Weight": 80,
-					"Type": "X",
 					"Reflect": false
 				}
 			],
@@ -274,7 +256,7 @@
 						"Target": "Parameter",
 						"Id": "ParamAngleZ"
 					},
-					"Weight": 60,
+					"Weight": 40,
 					"Type": "Angle",
 					"Reflect": false
 				},
@@ -283,7 +265,7 @@
 						"Target": "Parameter",
 						"Id": "ParamBodyAngleX"
 					},
-					"Weight": 20,
+					"Weight": 60,
 					"Type": "X",
 					"Reflect": false
 				},
@@ -292,17 +274,8 @@
 						"Target": "Parameter",
 						"Id": "ParamBodyAngleZ"
 					},
-					"Weight": 40,
+					"Weight": 60,
 					"Type": "Angle",
-					"Reflect": false
-				},
-				{
-					"Source": {
-						"Target": "Parameter",
-						"Id": "ParamBodyPosition"
-					},
-					"Weight": 40,
-					"Type": "X",
 					"Reflect": false
 				}
 			],
@@ -624,7 +597,7 @@
 						"Target": "Parameter",
 						"Id": "ParamAngleX"
 					},
-					"Weight": 10,
+					"Weight": 60,
 					"Type": "X",
 					"Reflect": false
 				},
@@ -642,7 +615,7 @@
 						"Target": "Parameter",
 						"Id": "ParamBodyAngleX"
 					},
-					"Weight": 10,
+					"Weight": 40,
 					"Type": "X",
 					"Reflect": false
 				},
@@ -653,15 +626,6 @@
 					},
 					"Weight": 40,
 					"Type": "Angle",
-					"Reflect": false
-				},
-				{
-					"Source": {
-						"Target": "Parameter",
-						"Id": "ParamBodyPosition"
-					},
-					"Weight": 80,
-					"Type": "X",
 					"Reflect": false
 				}
 			],
@@ -877,7 +841,7 @@
 						"Target": "Parameter",
 						"Id": "ParamAngleX"
 					},
-					"Weight": 10,
+					"Weight": 60,
 					"Type": "X",
 					"Reflect": false
 				},
@@ -895,7 +859,7 @@
 						"Target": "Parameter",
 						"Id": "ParamBodyAngleX"
 					},
-					"Weight": 10,
+					"Weight": 40,
 					"Type": "X",
 					"Reflect": false
 				},
@@ -906,15 +870,6 @@
 					},
 					"Weight": 40,
 					"Type": "Angle",
-					"Reflect": false
-				},
-				{
-					"Source": {
-						"Target": "Parameter",
-						"Id": "ParamBodyPosition"
-					},
-					"Weight": 80,
-					"Type": "X",
 					"Reflect": false
 				}
 			],
@@ -1130,7 +1085,7 @@
 						"Target": "Parameter",
 						"Id": "ParamAngleX"
 					},
-					"Weight": 10,
+					"Weight": 60,
 					"Type": "X",
 					"Reflect": false
 				},
@@ -1148,7 +1103,7 @@
 						"Target": "Parameter",
 						"Id": "ParamBodyAngleX"
 					},
-					"Weight": 10,
+					"Weight": 40,
 					"Type": "X",
 					"Reflect": false
 				},
@@ -1159,15 +1114,6 @@
 					},
 					"Weight": 40,
 					"Type": "Angle",
-					"Reflect": false
-				},
-				{
-					"Source": {
-						"Target": "Parameter",
-						"Id": "ParamBodyPosition"
-					},
-					"Weight": 80,
-					"Type": "X",
 					"Reflect": false
 				}
 			],
@@ -1383,7 +1329,7 @@
 						"Target": "Parameter",
 						"Id": "ParamAngleX"
 					},
-					"Weight": 10,
+					"Weight": 60,
 					"Type": "X",
 					"Reflect": false
 				},
@@ -1401,7 +1347,7 @@
 						"Target": "Parameter",
 						"Id": "ParamBodyAngleX"
 					},
-					"Weight": 10,
+					"Weight": 40,
 					"Type": "X",
 					"Reflect": false
 				},
@@ -1412,15 +1358,6 @@
 					},
 					"Weight": 40,
 					"Type": "Angle",
-					"Reflect": false
-				},
-				{
-					"Source": {
-						"Target": "Parameter",
-						"Id": "ParamBodyPosition"
-					},
-					"Weight": 80,
-					"Type": "X",
 					"Reflect": false
 				}
 			],

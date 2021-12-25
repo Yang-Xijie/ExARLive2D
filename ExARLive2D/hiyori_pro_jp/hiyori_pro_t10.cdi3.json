@@ -24,22 +24,22 @@
 		{
 			"Id": "ParamEyeLOpen",
 			"GroupId": "ParamGroupEyes",
-			"Name": "左目 開閉"
+			"Name": "左目　開閉"
 		},
 		{
 			"Id": "ParamEyeLSmile",
 			"GroupId": "ParamGroupEyes",
-			"Name": "左目 笑顔"
+			"Name": "左目　笑顔"
 		},
 		{
 			"Id": "ParamEyeROpen",
 			"GroupId": "ParamGroupEyes",
-			"Name": "右目 開閉"
+			"Name": "右目　開閉"
 		},
 		{
 			"Id": "ParamEyeRSmile",
 			"GroupId": "ParamGroupEyes",
-			"Name": "右目 笑顔"
+			"Name": "右目　笑顔"
 		},
 		{
 			"Id": "ParamEyeBallX",
@@ -54,67 +54,67 @@
 		{
 			"Id": "ParamBrowLY",
 			"GroupId": "ParamGroupBrows",
-			"Name": "左眉 上下"
+			"Name": "左眉　上下"
 		},
 		{
 			"Id": "ParamBrowRY",
 			"GroupId": "ParamGroupBrows",
-			"Name": "右眉 上下"
+			"Name": "右眉　上下"
 		},
 		{
 			"Id": "ParamBrowLX",
 			"GroupId": "ParamGroupBrows",
-			"Name": "左眉 左右"
+			"Name": "左眉　左右"
 		},
 		{
 			"Id": "ParamBrowRX",
 			"GroupId": "ParamGroupBrows",
-			"Name": "右眉 左右"
+			"Name": "右眉　左右"
 		},
 		{
 			"Id": "ParamBrowLAngle",
 			"GroupId": "ParamGroupBrows",
-			"Name": "左眉 角度"
+			"Name": "左眉　角度"
 		},
 		{
 			"Id": "ParamBrowRAngle",
 			"GroupId": "ParamGroupBrows",
-			"Name": "右眉 角度"
+			"Name": "右眉　角度"
 		},
 		{
 			"Id": "ParamBrowLForm",
 			"GroupId": "ParamGroupBrows",
-			"Name": "左眉 変形"
+			"Name": "左眉　変形"
 		},
 		{
 			"Id": "ParamBrowRForm",
 			"GroupId": "ParamGroupBrows",
-			"Name": "右眉 変形"
+			"Name": "右眉　変形"
 		},
 		{
 			"Id": "ParamMouthForm",
 			"GroupId": "ParamGroupMouth",
-			"Name": "口 変形"
+			"Name": "口　変形"
 		},
 		{
 			"Id": "ParamMouthOpenY",
 			"GroupId": "ParamGroupMouth",
-			"Name": "口 開閉"
+			"Name": "口　開閉"
 		},
 		{
 			"Id": "ParamBodyAngleX",
 			"GroupId": "ParamGroupBody",
-			"Name": "体の回転 X"
+			"Name": "体の回転　X"
 		},
 		{
 			"Id": "ParamBodyAngleY",
 			"GroupId": "ParamGroupBody",
-			"Name": "体の回転 Y"
+			"Name": "体の回転　Y"
 		},
 		{
 			"Id": "ParamBodyAngleZ",
 			"GroupId": "ParamGroupBody",
-			"Name": "体の回転 Z"
+			"Name": "体の回転　Z"
 		},
 		{
 			"Id": "ParamBreath",
@@ -122,114 +122,74 @@
 			"Name": "呼吸"
 		},
 		{
-			"Id": "ParamBodyPosition",
+			"Id": "ParamShoulder",
 			"GroupId": "ParamGroupBody",
-			"Name": "体の前後"
+			"Name": "肩　すくみ"
 		},
 		{
 			"Id": "ParamLeg",
 			"GroupId": "ParamGroupBody",
-			"Name": "脚"
+			"Name": "あし"
 		},
 		{
-			"Id": "ParamAllPositionX",
-			"GroupId": "ParamGroupBody",
-			"Name": "全体の位置 X"
-		},
-		{
-			"Id": "ParamAllPositionY",
-			"GroupId": "ParamGroupBody",
-			"Name": "全体の位置 Y"
-		},
-		{
-			"Id": "ParamAllRotate",
-			"GroupId": "ParamGroupBody",
-			"Name": "全体の回転"
-		},
-		{
-			"Id": "ParamAllScale",
-			"GroupId": "ParamGroupBody",
-			"Name": "全体の拡縮"
-		},
-		{
-			"Id": "ParamUpperarmL",
+			"Id": "ParamArmLA",
 			"GroupId": "ParamGroupArms",
-			"Name": "左上腕の回転"
+			"Name": "左腕 A"
 		},
 		{
-			"Id": "ParamUpperarmLY",
+			"Id": "ParamArmRA",
 			"GroupId": "ParamGroupArms",
-			"Name": "左上腕 Y"
+			"Name": "右腕 A"
 		},
 		{
-			"Id": "ParamForearm",
+			"Id": "ParamArmLB",
 			"GroupId": "ParamGroupArms",
-			"Name": "左前腕の回転"
+			"Name": "左腕 B"
 		},
 		{
-			"Id": "ParamForearmLY",
+			"Id": "ParamArmRB",
 			"GroupId": "ParamGroupArms",
-			"Name": "左前腕 Y"
+			"Name": "右腕 B"
 		},
 		{
-			"Id": "ParamWristL",
+			"Id": "ParamHandLB",
 			"GroupId": "ParamGroupArms",
-			"Name": "左手首の回転"
+			"Name": "左手B 回転"
 		},
 		{
-			"Id": "ParamWristLX",
+			"Id": "ParamHandRB",
 			"GroupId": "ParamGroupArms",
-			"Name": "左手首 X"
+			"Name": "右手B 回転"
 		},
 		{
-			"Id": "ParamUpperarmR",
+			"Id": "ParamHandL",
 			"GroupId": "ParamGroupArms",
-			"Name": "右上腕の回転"
+			"Name": "左手"
 		},
 		{
-			"Id": "ParamUpperarmRY",
+			"Id": "ParamHandR",
 			"GroupId": "ParamGroupArms",
-			"Name": "右上腕 Y"
-		},
-		{
-			"Id": "ParamForearmR",
-			"GroupId": "ParamGroupArms",
-			"Name": "右前腕の回転"
-		},
-		{
-			"Id": "ParamForearmRY",
-			"GroupId": "ParamGroupArms",
-			"Name": "右前腕 Y"
-		},
-		{
-			"Id": "ParamWristR",
-			"GroupId": "ParamGroupArms",
-			"Name": "右手首の回転"
-		},
-		{
-			"Id": "ParamWristRX",
-			"GroupId": "ParamGroupArms",
-			"Name": "右手首 X"
+			"Name": "右手"
 		},
 		{
 			"Id": "ParamBustY",
 			"GroupId": "ParamGroupSway",
-			"Name": "胸の揺れ"
+			"Name": "胸　揺れ"
 		},
 		{
 			"Id": "ParamHairAhoge",
 			"GroupId": "ParamGroupSway",
-			"Name": "髪揺れ アホ毛"
+			"Name": "髪揺れ　アホ毛"
 		},
 		{
 			"Id": "ParamHairFront",
 			"GroupId": "ParamGroupSway",
-			"Name": "髪揺れ 前"
+			"Name": "髪揺れ　前"
 		},
 		{
 			"Id": "ParamHairBack",
 			"GroupId": "ParamGroupSway",
-			"Name": "髪揺れ 後"
+			"Name": "髪揺れ　後"
 		},
 		{
 			"Id": "ParamSideupRibbon",
@@ -254,142 +214,142 @@
 		{
 			"Id": "Param_Angle_Rotation_1_ArtMesh62",
 			"GroupId": "ParamGroup2",
-			"Name": "[0]左サイドアップ"
+			"Name": "[0]サイドアップ左"
 		},
 		{
 			"Id": "Param_Angle_Rotation_2_ArtMesh62",
 			"GroupId": "ParamGroup2",
-			"Name": "[1]左サイドアップ"
+			"Name": "[1]サイドアップ左"
 		},
 		{
 			"Id": "Param_Angle_Rotation_3_ArtMesh62",
 			"GroupId": "ParamGroup2",
-			"Name": "[2]左サイドアップ"
+			"Name": "[2]サイドアップ左"
 		},
 		{
 			"Id": "Param_Angle_Rotation_4_ArtMesh62",
 			"GroupId": "ParamGroup2",
-			"Name": "[3]左サイドアップ"
+			"Name": "[3]サイドアップ左"
 		},
 		{
 			"Id": "Param_Angle_Rotation_5_ArtMesh62",
 			"GroupId": "ParamGroup2",
-			"Name": "[4]左サイドアップ"
+			"Name": "[4]サイドアップ左"
 		},
 		{
 			"Id": "Param_Angle_Rotation_6_ArtMesh62",
 			"GroupId": "ParamGroup2",
-			"Name": "[5]左サイドアップ"
+			"Name": "[5]サイドアップ左"
 		},
 		{
 			"Id": "Param_Angle_Rotation_7_ArtMesh62",
 			"GroupId": "ParamGroup2",
-			"Name": "[6]左サイドアップ"
+			"Name": "[6]サイドアップ左"
 		},
 		{
 			"Id": "Param_Angle_Rotation_1_ArtMesh61",
 			"GroupId": "ParamGroup",
-			"Name": "[0]右サイドアップ"
+			"Name": "[0]サイドアップ右"
 		},
 		{
 			"Id": "Param_Angle_Rotation_2_ArtMesh61",
 			"GroupId": "ParamGroup",
-			"Name": "[1]右サイドアップ"
+			"Name": "[1]サイドアップ右"
 		},
 		{
 			"Id": "Param_Angle_Rotation_3_ArtMesh61",
 			"GroupId": "ParamGroup",
-			"Name": "[2]右サイドアップ"
+			"Name": "[2]サイドアップ右"
 		},
 		{
 			"Id": "Param_Angle_Rotation_4_ArtMesh61",
 			"GroupId": "ParamGroup",
-			"Name": "[3]右サイドアップ"
+			"Name": "[3]サイドアップ右"
 		},
 		{
 			"Id": "Param_Angle_Rotation_5_ArtMesh61",
 			"GroupId": "ParamGroup",
-			"Name": "[4]右サイドアップ"
+			"Name": "[4]サイドアップ右"
 		},
 		{
 			"Id": "Param_Angle_Rotation_6_ArtMesh61",
 			"GroupId": "ParamGroup",
-			"Name": "[5]右サイドアップ"
+			"Name": "[5]サイドアップ右"
 		},
 		{
 			"Id": "Param_Angle_Rotation_7_ArtMesh61",
 			"GroupId": "ParamGroup",
-			"Name": "[6]右サイドアップ"
+			"Name": "[6]サイドアップ右"
 		},
 		{
 			"Id": "Param_Angle_Rotation_1_ArtMesh55",
 			"GroupId": "ParamGroup4",
-			"Name": "[0]左前髪"
+			"Name": "[0]前髪左"
 		},
 		{
 			"Id": "Param_Angle_Rotation_2_ArtMesh55",
 			"GroupId": "ParamGroup4",
-			"Name": "[1]左前髪"
+			"Name": "[1]前髪左"
 		},
 		{
 			"Id": "Param_Angle_Rotation_3_ArtMesh55",
 			"GroupId": "ParamGroup4",
-			"Name": "[2]左前髪"
+			"Name": "[2]前髪左"
 		},
 		{
 			"Id": "Param_Angle_Rotation_4_ArtMesh55",
 			"GroupId": "ParamGroup4",
-			"Name": "[3]左前髪"
+			"Name": "[3]前髪左"
 		},
 		{
 			"Id": "Param_Angle_Rotation_5_ArtMesh55",
 			"GroupId": "ParamGroup4",
-			"Name": "[4]左前髪"
+			"Name": "[4]前髪左"
 		},
 		{
 			"Id": "Param_Angle_Rotation_6_ArtMesh55",
 			"GroupId": "ParamGroup4",
-			"Name": "[5]左前髪"
+			"Name": "[5]前髪左"
 		},
 		{
 			"Id": "Param_Angle_Rotation_7_ArtMesh55",
 			"GroupId": "ParamGroup4",
-			"Name": "[6]左前髪"
+			"Name": "[6]前髪左"
 		},
 		{
 			"Id": "Param_Angle_Rotation_1_ArtMesh54",
 			"GroupId": "ParamGroup3",
-			"Name": "[0]右前髪"
+			"Name": "[0]前髪右"
 		},
 		{
 			"Id": "Param_Angle_Rotation_2_ArtMesh54",
 			"GroupId": "ParamGroup3",
-			"Name": "[1]右前髪"
+			"Name": "[1]前髪右"
 		},
 		{
 			"Id": "Param_Angle_Rotation_3_ArtMesh54",
 			"GroupId": "ParamGroup3",
-			"Name": "[2]右前髪"
+			"Name": "[2]前髪右"
 		},
 		{
 			"Id": "Param_Angle_Rotation_4_ArtMesh54",
 			"GroupId": "ParamGroup3",
-			"Name": "[3]右前髪"
+			"Name": "[3]前髪右"
 		},
 		{
 			"Id": "Param_Angle_Rotation_5_ArtMesh54",
 			"GroupId": "ParamGroup3",
-			"Name": "[4]右前髪"
+			"Name": "[4]前髪右"
 		},
 		{
 			"Id": "Param_Angle_Rotation_6_ArtMesh54",
 			"GroupId": "ParamGroup3",
-			"Name": "[5]右前髪"
+			"Name": "[5]前髪右"
 		},
 		{
 			"Id": "Param_Angle_Rotation_7_ArtMesh54",
 			"GroupId": "ParamGroup3",
-			"Name": "[6]右前髪"
+			"Name": "[6]前髪右"
 		}
 	],
 	"ParameterGroups": [
@@ -436,29 +396,25 @@
 		{
 			"Id": "ParamGroup2",
 			"GroupId": "",
-			"Name": "揺れ 左サイドアップ"
+			"Name": "揺れ　サイドアップ左"
 		},
 		{
 			"Id": "ParamGroup",
 			"GroupId": "",
-			"Name": "揺れ 右サイドアップ"
+			"Name": "揺れ　サイドアップ右"
 		},
 		{
 			"Id": "ParamGroup4",
 			"GroupId": "",
-			"Name": "揺れ 左前髪"
+			"Name": "揺れ　前髪左"
 		},
 		{
 			"Id": "ParamGroup3",
 			"GroupId": "",
-			"Name": "揺れ 右前髪"
+			"Name": "揺れ　前髪右"
 		}
 	],
 	"Parts": [
-		{
-			"Id": "PartDesk",
-			"Name": "机"
-		},
 		{
 			"Id": "PartCore",
 			"Name": "コア"
@@ -508,16 +464,24 @@
 			"Name": "首"
 		},
 		{
-			"Id": "PartArmL",
-			"Name": "左腕"
+			"Id": "PartArmA",
+			"Name": "腕 A"
 		},
 		{
-			"Id": "PartArmR",
-			"Name": "右腕"
+			"Id": "PartArmB",
+			"Name": "腕 B"
 		},
 		{
 			"Id": "PartBody",
 			"Name": "体"
+		},
+		{
+			"Id": "PartBackground",
+			"Name": "背景"
+		},
+		{
+			"Id": "PartSketch",
+			"Name": "[ 下絵 ]"
 		},
 		{
 			"Id": "PartEyeBall",
@@ -525,75 +489,35 @@
 		},
 		{
 			"Id": "ArtMesh55_Skinning",
-			"Name": "左前髪(スキニング)"
+			"Name": "前髪左(スキニング)"
 		},
 		{
 			"Id": "Part4",
-			"Name": "左前髪(回転)"
+			"Name": "前髪左(回転)"
 		},
 		{
 			"Id": "ArtMesh54_Skinning",
-			"Name": "右前髪(スキニング)"
+			"Name": "前髪右(スキニング)"
 		},
 		{
 			"Id": "Part3",
-			"Name": "右前髪(回転)"
+			"Name": "前髪右(回転)"
 		},
 		{
 			"Id": "ArtMesh61_Skinning",
-			"Name": "右サイドアップ(スキニング)"
+			"Name": "サイドアップ右(スキニング)"
 		},
 		{
 			"Id": "Part",
-			"Name": "右サイドアップ(回転)"
+			"Name": "サイドアップ右(回転)"
 		},
 		{
 			"Id": "ArtMesh62_Skinning",
-			"Name": "左サイドアップ(スキニング)"
+			"Name": "サイドアップ左(スキニング)"
 		},
 		{
 			"Id": "Part2",
-			"Name": "左サイドアップ(回転)"
-		},
-		{
-			"Id": "PartHandL",
-			"Name": "左手"
-		},
-		{
-			"Id": "PartForearmL",
-			"Name": "左前腕"
-		},
-		{
-			"Id": "PartElbowL",
-			"Name": "左ひじ"
-		},
-		{
-			"Id": "PartUpperarmL",
-			"Name": "左上腕"
-		},
-		{
-			"Id": "PartHandR",
-			"Name": "右手"
-		},
-		{
-			"Id": "PartForearmR",
-			"Name": "右前腕"
-		},
-		{
-			"Id": "PartElbowR",
-			"Name": "右ひじ"
-		},
-		{
-			"Id": "PartUpperarmR",
-			"Name": "右上腕"
-		},
-		{
-			"Id": "PartHandBackL",
-			"Name": "左手 背面"
-		},
-		{
-			"Id": "PartHandBackR",
-			"Name": "右手 背面"
+			"Name": "サイドアップ左(回転)"
 		}
 	]
 }

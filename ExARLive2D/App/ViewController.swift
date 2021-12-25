@@ -170,7 +170,7 @@ class ViewController: GLKViewController {
 
         Live2DCubism.initL2D()
 
-        let jsonFile = "hiyori_movie_pro_t01.model3"
+        let jsonFile = "hiyori_pro_t10.model3"
 
         guard let jsonPath = Bundle.main.path(forResource: jsonFile, ofType: "json") else {
             print("Failed to find model json file")
