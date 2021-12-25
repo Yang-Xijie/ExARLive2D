@@ -13,8 +13,6 @@
 		483E28AA277766B500D53495 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483E28A8277766B500D53495 /* Main.storyboard */; };
 		483E28AC277766B700D53495 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 483E28AB277766B700D53495 /* Assets.xcassets */; };
 		483E28AF277766B700D53495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483E28AD277766B700D53495 /* LaunchScreen.storyboard */; };
-		483E297627776C0100D53495 /* libLive2DCubismCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 483E28DD27776C0100D53495 /* libLive2DCubismCore.a */; };
-		483E297727776C0100D53495 /* libLive2DCubismCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 483E28DF27776C0100D53495 /* libLive2DCubismCore.a */; };
 		483E297B27776C0100D53495 /* CubismFramework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 483E290C27776C0100D53495 /* CubismFramework.cpp */; };
 		483E297C27776C0100D53495 /* CubismModelSettingJson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 483E291027776C0100D53495 /* CubismModelSettingJson.cpp */; };
 		483E297D27776C0100D53495 /* CubismPose.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 483E291327776C0100D53495 /* CubismPose.cpp */; };
@@ -203,8 +201,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				483E297627776C0100D53495 /* libLive2DCubismCore.a in Frameworks */,
-				483E297727776C0100D53495 /* libLive2DCubismCore.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -864,14 +860,16 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C4W6UUH267;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/CubismSdkForNative-4-r.4/Core/lib/ios/Release-iphoneos",
-					"$(PROJECT_DIR)/CubismSdkForNative-4-r.4/Core/lib/ios/Debug-iphoneos",
-					"$(PROJECT_DIR)/CubismSdkForNative-4-r.4/Core/dll/macos",
-					"$(PROJECT_DIR)/CubismSdkForNative-4-r.4/Core/dll/windows/x86",
-					"$(PROJECT_DIR)/CubismSdkForNative-4-r.4/Core/dll/windows/x86_64",
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					CSM_TARGET_IPHONE_ES2,
+					"DEBUG=1",
+					"GLES_SILENCE_DEPRECATION=1",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/CubismSdkForNative-4-r.4/Core/include",
+					"$(SRCROOT)/CubismSdkForNative-4-r.4/Framework/src",
+				);
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -884,14 +882,15 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C4W6UUH267;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/CubismSdkForNative-4-r.4/Core/lib/ios/Release-iphoneos",
-					"$(PROJECT_DIR)/CubismSdkForNative-4-r.4/Core/lib/ios/Debug-iphoneos",
-					"$(PROJECT_DIR)/CubismSdkForNative-4-r.4/Core/dll/macos",
-					"$(PROJECT_DIR)/CubismSdkForNative-4-r.4/Core/dll/windows/x86",
-					"$(PROJECT_DIR)/CubismSdkForNative-4-r.4/Core/dll/windows/x86_64",
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					CSM_TARGET_IPHONE_ES2,
+					"GLES_SILENCE_DEPRECATION=1",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/CubismSdkForNative-4-r.4/Core/include",
+					"$(SRCROOT)/CubismSdkForNative-4-r.4/Framework/src",
+				);
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

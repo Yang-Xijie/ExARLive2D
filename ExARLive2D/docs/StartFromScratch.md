@@ -28,15 +28,50 @@ rm -rf Core/dll # have noting to do with iOS
 rm -rf Core/lib/android Core/lib/experimental Core/lib/linux Core/lib/macos Core/lib/windows # just leave Core/lib/ios
 rm -rf Core/lib/ios/Debug-iphonesimulator Core/lib/ios/Release-iphonesimulator # to use ARKit, simulator is useless. run the project on real machine.
 ```
-It will be enough. Never mind the CMakeLists.txt because we are build them using Xcode.
+It will be enough. Never mind the `CMakeLists.txt`s because we are build them using Xcode so they are useless.
 
 4. Add a static library in Xcode.
-Targets - puls - iOS - Static Library - name it live2d-lib and choose Objective-C
-delete live2d_lib.h and live2d_lib.m in the newly generated folder live2d-lib (choose move to trash)
+`Targets -> puls -> iOS -> Static Library` name it `live2d-lib` and choose `Objective-C`
+Delete `live2d_lib.h` and `live2d_lib.m` in the newly generated folder `live2d-lib/` (choose `move to trash`)
 
-5. Drag the folder `CubismSdkForNative-4-r.4` into Xcode (put at srcroot)
-choose `Copy items if needed`
-choose `Create groups`
-choose `Add to targets: live2d-lib`
+5. Drag the folder `CubismSdkForNative-4-r.4` into Xcode (put at srcroot).
+Choose `Copy items if needed`.
+Choose `Create groups`.
+Choose `Add to targets: live2d-lib`.
+Click `Done`.
+Check in `Targets -> live2d-lib -> Build Phase`: `Compile Sources` should be 37 items
+Here we should deleted `Link Binary With Library`(2 items) that are autimatically added by Xcode.
 
-6. 
+6. Add search path. 
+Try to build and get error `'Model/CubismModel.hpp' file not found` and `"Type/CubismBasicType.hpp"`
+`Targets -> live2d-lib -> build settings -> search path -> Header Search Paths`
+Add `$(SRCROOT)/CubismSdkForNative-4-r.4/Core/include`(non-recursive) and `$(SRCROOT)/CubismSdkForNative-4-r.4/Framework/src`(non-recursive).
+Rebuild and get error `Unknown type name 'Gluint'`
+
+7. Add compile macros.
+`Targets - live2d-lib - build settings - Apple Clang -> Preprocessing -> Preprocessor Macros`
+Debug: `CSM_TARGET_IPHONE_ES2` `DEBUG=1`
+Release: `CSM_TARGET_IPHONE_ES2`
+Build and find it works!!
+But there are 282 issues, most of them are `Deprecations`. It is because Apple have deprecated OpenGL.
+
+8. Remove issues (unneccessary)
+`Targets - live2d-lib - build settings - Apple Clang -> Preprocessing -> Preprocessor Macros`
+Debug: `CSM_TARGET_IPHONE_ES2` `DEBUG=1` `GLES_SILENCE_DEPRECATION=1`
+Release: `CSM_TARGET_IPHONE_ES2` `GLES_SILENCE_DEPRECATION=1`
+Build and only get 18 issues, just ignore them.
+
+# Configure the Project
+
+
+
+
+
+
+
+- - - 
+
+# References
+
+https://www.cxyzjd.com/article/weixin_30420045/114690603
+https://github.com/mzyy94/ARKit-Live2D
