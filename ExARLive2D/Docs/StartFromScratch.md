@@ -56,7 +56,7 @@ Build and find it works!!
 But there are 282 issues, most of them are `Deprecations`. It is because Apple have deprecated OpenGL.
 
 8. Remove issues (unneccessary)
-`Targets - live2d-lib - build settings - Apple Clang -> Preprocessing -> Preprocessor Macros`
+`Targets -> live2d-lib -> build settings -> Apple Clang -> Preprocessing -> Preprocessor Macros`
 Debug: `CSM_TARGET_IPHONE_ES2` `DEBUG=1` `GLES_SILENCE_DEPRECATION=1`
 Release: `CSM_TARGET_IPHONE_ES2` `GLES_SILENCE_DEPRECATION=1`
 Build and only get 18 issues, just ignore them.
@@ -79,6 +79,12 @@ and in `Targets -> ExARLive2D -> Build Settings -> Library search path` add  `$(
 5. Copy all files and it should build.
 
 6. Set the `Info.plist`.
+
+7. Remove issues (unneccessary)
+`Targets -> ExARLive2D -> build settings -> Apple Clang -> Preprocessing -> Preprocessor Macros`
+Debug: `CSM_TARGET_IPHONE_ES2` `DEBUG=1` `GLES_SILENCE_DEPRECATION=1`
+Release: `CSM_TARGET_IPHONE_ES2` `GLES_SILENCE_DEPRECATION=1`
+Build and only get 18 issues, just ignore them.
 
 - - - 
 
