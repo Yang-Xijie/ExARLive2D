@@ -1,6 +1,6 @@
 import UIKit
 
-class SettingController: UIViewController {
+class SettingsController: UIViewController {
     // MARK: - Background Color
 
     private let setBackgroundColorButton: UIButton = {
@@ -85,7 +85,7 @@ class SettingController: UIViewController {
             defaults.set(g, forKey: SETTINGS.key.GREEN)
             defaults.set(b, forKey: SETTINGS.key.BLUE)
 
-            self.updateInfo()
+            self.DisplayInfo()
         }))
 
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
@@ -115,7 +115,7 @@ class SettingController: UIViewController {
     @objc private func handleSlideZoom() {
         let defaults = UserDefaults.standard
         defaults.set(setZoomSlider.value, forKey: SETTINGS.key.ZOOM)
-        updateInfo()
+        DisplayInfo()
     }
 
     // MARK: - XY position
@@ -140,7 +140,7 @@ class SettingController: UIViewController {
     @objc private func handleYPos() {
         let defaults = UserDefaults.standard
         defaults.set(setYPositionSlider.value, forKey: SETTINGS.key.Y)
-        updateInfo()
+        DisplayInfo()
     }
 
     private let setXPositionSlider: UISlider = {
@@ -163,7 +163,7 @@ class SettingController: UIViewController {
     @objc private func handleXPos() {
         let defaults = UserDefaults.standard
         defaults.set(setXPositionSlider.value, forKey: SETTINGS.key.X)
-        updateInfo()
+        DisplayInfo()
     }
 
     // MARK: - infoTextView
@@ -178,7 +178,7 @@ class SettingController: UIViewController {
         return textview
     }()
 
-    private func generateInfo() -> String {
+    private func GetInfo() -> String {
         let r = UserDefaults.standard.integer(forKey: SETTINGS.key.RED)
         let g = UserDefaults.standard.integer(forKey: SETTINGS.key.GREEN)
         let b = UserDefaults.standard.integer(forKey: SETTINGS.key.BLUE)
@@ -191,8 +191,8 @@ class SettingController: UIViewController {
         return info
     }
 
-    private func updateInfo() {
-        infoTextView.text = generateInfo()
+    private func DisplayInfo() {
+        infoTextView.text = GetInfo()
     }
 
     // MARK: - restore
@@ -207,13 +207,13 @@ class SettingController: UIViewController {
     @objc private func handleRestore() {
         let alert = UIAlertController(title: "Warning", message: "Are you sure you to restore default settings?\n Your settings before will be stored in the pasteboard.", preferredStyle: .alert)
         alert.addAction(.init(title: "Restore", style: .destructive, handler: { _ in
-            let oldInfo = self.generateInfo()
+            let oldInfo = self.GetInfo()
             let pasteboard = UIPasteboard.general
             pasteboard.string = oldInfo
 
             SETTINGS.setAllToDefaultValue()
 
-            self.updateInfo()
+            self.DisplayInfo()
         }))
 
         alert.addAction(.init(title: "Cancel", style: .cancel, handler: nil))
@@ -224,7 +224,11 @@ class SettingController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        updateInfo()
+        DisplayInfo()
+
+        // MARK: - self settings
+
+        self.view.backgroundColor = .init(cgColor: .init(red: 0, green: 0, blue: 0, alpha: 0))
 
         // MARK: - layout
 
@@ -262,12 +266,10 @@ class SettingController: UIViewController {
         subStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -24.0).isActive = true
         subStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0.0).isActive = true
         subStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0.0).isActive = true
-
-        // MARK: - Other Settings
     }
 }
 
-extension SettingController {
+extension SettingsController {
     private func displayAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
