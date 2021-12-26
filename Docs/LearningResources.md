@@ -28,4 +28,4 @@ If you want to use the live2d model to stream on Mac, just set the background to
 
 `SDK tutorials` https://docs.live2d.com/cubism-sdk-tutorials/top/?locale=en_us
 
-Download SDK of live2d for Native https://www.live2d.com/en/download/cubism-sdk/download-native/
+Download `Live2D SDK for Native` https://www.live2d.com/en/download/cubism-sdk/download-native/

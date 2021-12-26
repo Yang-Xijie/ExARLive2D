@@ -1,8 +1,8 @@
-# Use Live2d On Mac
+# Use Live2D On Mac
 
 Using this project `ExARLive`, you could show the demo live2d model on your iPhone or iPad screen, which will follow your facial movement.
 
-To cast this model on Mac:
+To cast the live2d on Mac:
 1. Open `ExARLive` and open the `Settings` panel to set the background to green (R, G, B = 0, 255, 0).
 2. Connect your iPhone with Mac (using Lightning to Type-C cable) or connect your iPad with Mac (using Type-C to Type-C cable).
 3. Install [OBS](https://obsproject.com) on your Mac and open it.

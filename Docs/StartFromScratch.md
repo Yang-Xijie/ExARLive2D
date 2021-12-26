@@ -2,7 +2,7 @@
 
 # Build the Live2D static lib
 
-1. Download live2d SDK for native form <https://www.live2d.com/en/download/cubism-sdk/download-native/> and get `CubismSdkForNative-4-r.4.zip`.
+1. Download `Live2D SDK for Native` form <https://www.live2d.com/en/download/cubism-sdk/download-native/> and get `CubismSdkForNative-4-r.4.zip`.
 
 2. Unzip the file and get `CubismSdkForNative-4-r.4/`.
 Files and folders:
