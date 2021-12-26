@@ -229,6 +229,7 @@
 		4848A70A2777884A00BA19EA /* hiyori_pro_t10.cdi3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_pro_t10.cdi3.json; sourceTree = "<group>"; };
 		4848A70B2777884A00BA19EA /* hiyori_pro_t10.model3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_pro_t10.model3.json; sourceTree = "<group>"; };
 		4848A70C2777884A00BA19EA /* hiyori_pro_t10.physics3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_pro_t10.physics3.json; sourceTree = "<group>"; };
+		48A290482778333D00C07E71 /* UseLive2dOnMac.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = UseLive2dOnMac.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +291,7 @@
 			children = (
 				483E28B72777672C00D53495 /* StartFromScratch.md */,
 				4848A6D72777744F00BA19EA /* LearningResources.md */,
+				48A290482778333D00C07E71 /* UseLive2dOnMac.md */,
 			);
 			path = Docs;
 			sourceTree = "<group>";

@@ -1,5 +1,19 @@
 # README
 
+An app using ARKit to capture your face and cast the movement to live2d model.
+
+## Usage
+
+1. Clone or download the project.
+2. Open the `ExARLive2D.xcodeproj`. In target `ExARLive2D`, set your Team Signing.
+3. Run on a real device that supports FaceID (true depth front camera, check https://support.apple.com/en-us/HT209183 to see if your devices satisfy).
+
+## Docs
+
+* [Structure this project from ccratch](./Docs/StartFromScratch.md)
+* [Learning resources about face capturing and frameworks of Apple](./Docs/LearningResources.md)
+* [Use live2d generated in ExARLive when streaming on Mac](./Docs/UseLive2dOnMac.md)
+
 # References
 
 ## mzyy94/ARKit-Live2D
