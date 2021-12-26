@@ -108,13 +108,13 @@ class ViewController: GLKViewController {
     // MARK: - Gesture action
 
     @IBAction func tapInfoButton(_ sender: UIButton) {
-        let liveBroadcast = UIAlertAction(title: controller.isBroadcasting ? "Stop Broadcast" : "Live Broadcast", style: .default, handler: { _ in
-            if self.controller.isBroadcasting {
-                self.stopBroadcast()
-            } else {
-                self.startBroadcast()
-            }
-        })
+//        let liveBroadcast = UIAlertAction(title: controller.isBroadcasting ? "Stop Broadcast" : "Live Broadcast", style: .default, handler: { _ in
+//            if self.controller.isBroadcasting {
+//                self.stopBroadcast()
+//            } else {
+//                self.startBroadcast()
+//            }
+//        })
 
         let toggleSceneView = UIAlertAction(title: sceneView.isHidden ? "Show Front View" : "Hide Front View", style: .default, handler: { _ in
             self.sceneView.isHidden.toggle()
@@ -127,7 +127,7 @@ class ViewController: GLKViewController {
         })
 
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        actionSheet.addAction(liveBroadcast)
+//        actionSheet.addAction(liveBroadcast)
         actionSheet.addAction(toggleSceneView)
         actionSheet.addAction(setting)
 
@@ -140,28 +140,28 @@ class ViewController: GLKViewController {
 
     // MARK: - ReplayKit Live broadcasting
 
-    func startBroadcast() {
-        RPScreenRecorder.shared().isMicrophoneEnabled = true // Not work?
-        RPBroadcastActivityViewController.load { broadcastAVC, error in
-            if error != nil {
-                print("Load BroadcastActivityViewController failed. ::" + self.errorString(error!))
-                return
-            }
-            if let broadcastAVC = broadcastAVC {
-                broadcastAVC.delegate = self
-                self.present(broadcastAVC, animated: true, completion: nil)
-            }
-        }
-    }
-
-    func stopBroadcast() {
-        controller.finishBroadcast { error in
-            if error != nil {
-                print("Finish broadcast failed. ::" + self.errorString(error!))
-                return
-            }
-        }
-    }
+//    func startBroadcast() {
+//        RPScreenRecorder.shared().isMicrophoneEnabled = true // Not work?
+//        RPBroadcastActivityViewController.load { broadcastAVC, error in
+//            if error != nil {
+//                print("Load BroadcastActivityViewController failed. ::" + self.errorString(error!))
+//                return
+//            }
+//            if let broadcastAVC = broadcastAVC {
+//                broadcastAVC.delegate = self
+//                self.present(broadcastAVC, animated: true, completion: nil)
+//            }
+//        }
+//    }
+//
+//    func stopBroadcast() {
+//        controller.finishBroadcast { error in
+//            if error != nil {
+//                print("Finish broadcast failed. ::" + self.errorString(error!))
+//                return
+//            }
+//        }
+//    }
 
     /// - Tag: ARFaceTrackingSetup
     func resetTracking() {
@@ -314,21 +314,21 @@ extension ViewController: ARSessionDelegate {
 
 // MARK: - RPBroadcastActivityViewControllerDelegate
 
-extension ViewController: RPBroadcastActivityViewControllerDelegate {
-    func broadcastActivityViewController(_ broadcastActivityViewController: RPBroadcastActivityViewController, didFinishWith broadcastController: RPBroadcastController?, error: Error?) {
-        if error != nil {
-            broadcastActivityViewController.dismiss(animated: false, completion: nil)
-            print("Set broadcast controller failed. ::" + errorString(error!))
-            return
-        }
-
-        broadcastActivityViewController.dismiss(animated: true) {
-            broadcastController?.startBroadcast { error in
-                if error != nil {
-                    print("Start broadcast failed. ::" + self.errorString(error!))
-                    return
-                }
-            }
-        }
-    }
-}
+// extension ViewController: RPBroadcastActivityViewControllerDelegate {
+//    func broadcastActivityViewController(_ broadcastActivityViewController: RPBroadcastActivityViewController, didFinishWith broadcastController: RPBroadcastController?, error: Error?) {
+//        if error != nil {
+//            broadcastActivityViewController.dismiss(animated: false, completion: nil)
+//            print("Set broadcast controller failed. ::" + errorString(error!))
+//            return
+//        }
+//
+//        broadcastActivityViewController.dismiss(animated: true) {
+//            broadcastController?.startBroadcast { error in
+//                if error != nil {
+//                    print("Start broadcast failed. ::" + self.errorString(error!))
+//                    return
+//                }
+//            }
+//        }
+//    }
+// }
