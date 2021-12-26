@@ -237,7 +237,7 @@
 		489B1B6C2778956800655A65 /* Live2DVC+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Live2DVC+Configuration.swift"; sourceTree = "<group>"; };
 		489B1B6F2778980300655A65 /* Live2DVC+Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Live2DVC+Position.swift"; sourceTree = "<group>"; };
 		489B1B712778982500655A65 /* Live2DVS+ARSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Live2DVS+ARSession.swift"; sourceTree = "<group>"; };
-		48A290482778333D00C07E71 /* UseLive2dOnMac.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = UseLive2dOnMac.md; sourceTree = "<group>"; };
+		48A290482778333D00C07E71 /* UseLive2DOnMac.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = UseLive2DOnMac.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,7 +299,7 @@
 			children = (
 				483E28B72777672C00D53495 /* StartFromScratch.md */,
 				4848A6D72777744F00BA19EA /* LearningResources.md */,
-				48A290482778333D00C07E71 /* UseLive2dOnMac.md */,
+				48A290482778333D00C07E71 /* UseLive2DOnMac.md */,
 			);
 			path = Docs;
 			sourceTree = "<group>";

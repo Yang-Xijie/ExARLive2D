@@ -10,9 +10,13 @@
 
 ## Docs
 
-* [Structure this project from scratch](./Docs/StartFromScratch.md)
-* [Learning resources of face capturing and frameworks provided by Apple](./Docs/LearningResources.md)
-* [Use live2d from ExARLive2D when streaming on Mac](./Docs/UseLive2dOnMac.md)
+* [Build this project from scratch](./Docs/StartFromScratch.md)
+* [Learning resources for face capturing and frameworks provided by Apple](./Docs/LearningResources.md)
+* [Use live2d from ExARLive2D when streaming on Mac](./Docs/UseLive2DOnMac.md)
+
+## Repo
+
+`Issues`, `Pull requests` and `Discussions` are welcome!
 
 # References
 
