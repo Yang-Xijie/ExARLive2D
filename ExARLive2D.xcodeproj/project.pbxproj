@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		483E28A3277766B500D53495 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E28A2277766B500D53495 /* AppDelegate.swift */; };
-		483E28A7277766B500D53495 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E28A6277766B500D53495 /* ViewController.swift */; };
+		483E28A7277766B500D53495 /* Live2DVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E28A6277766B500D53495 /* Live2DVC.swift */; };
 		483E28AC277766B700D53495 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 483E28AB277766B700D53495 /* Assets.xcassets */; };
 		483E28AF277766B700D53495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483E28AD277766B700D53495 /* LaunchScreen.storyboard */; };
 		483E297B27776C0100D53495 /* CubismFramework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 483E290C27776C0100D53495 /* CubismFramework.cpp */; };
@@ -51,7 +51,7 @@
 		4848A6D92777763900BA19EA /* liblive2d-lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 483E28C827776B9B00D53495 /* liblive2d-lib.a */; };
 		4848A6DD2777771000BA19EA /* Live2D-binding.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4848A6DC2777771000BA19EA /* Live2D-binding.mm */; };
 		4848A6E027777C8300BA19EA /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4848A6DF27777C8300BA19EA /* SettingController.swift */; };
-		4848A6E227777C8800BA19EA /* ContentUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4848A6E127777C8800BA19EA /* ContentUpdater.swift */; };
+		4848A6E227777C8800BA19EA /* Live2DViewUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4848A6E127777C8800BA19EA /* Live2DViewUpdater.swift */; };
 		4848A6E427777C8C00BA19EA /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4848A6E327777C8C00BA19EA /* Settings.swift */; };
 		4848A6F227777D3E00BA19EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4848A6F127777D3E00BA19EA /* Main.storyboard */; };
 		4848A70D2777884A00BA19EA /* texture_00.png in Resources */ = {isa = PBXBuildFile; fileRef = 4848A6FB2777884A00BA19EA /* texture_00.png */; };
@@ -71,6 +71,7 @@
 		4848A71B2777884A00BA19EA /* hiyori_pro_t10.cdi3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4848A70A2777884A00BA19EA /* hiyori_pro_t10.cdi3.json */; };
 		4848A71C2777884A00BA19EA /* hiyori_pro_t10.model3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4848A70B2777884A00BA19EA /* hiyori_pro_t10.model3.json */; };
 		4848A71D2777884A00BA19EA /* hiyori_pro_t10.physics3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4848A70C2777884A00BA19EA /* hiyori_pro_t10.physics3.json */; };
+		485BE88C27788EF40074A80E /* Live2DVC+TapInfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485BE88B27788EF40074A80E /* Live2DVC+TapInfoButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -88,7 +89,7 @@
 /* Begin PBXFileReference section */
 		483E289F277766B500D53495 /* ExARLive2D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExARLive2D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		483E28A2277766B500D53495 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		483E28A6277766B500D53495 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		483E28A6277766B500D53495 /* Live2DVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Live2DVC.swift; sourceTree = "<group>"; };
 		483E28AB277766B700D53495 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		483E28AE277766B700D53495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		483E28B62777671100D53495 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -208,7 +209,7 @@
 		4848A6DC2777771000BA19EA /* Live2D-binding.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "Live2D-binding.mm"; sourceTree = "<group>"; };
 		4848A6DE277777C100BA19EA /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		4848A6DF27777C8300BA19EA /* SettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
-		4848A6E127777C8800BA19EA /* ContentUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentUpdater.swift; sourceTree = "<group>"; };
+		4848A6E127777C8800BA19EA /* Live2DViewUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Live2DViewUpdater.swift; sourceTree = "<group>"; };
 		4848A6E327777C8C00BA19EA /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		4848A6F127777D3E00BA19EA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4848A6F527777F6000BA19EA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -229,6 +230,7 @@
 		4848A70A2777884A00BA19EA /* hiyori_pro_t10.cdi3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_pro_t10.cdi3.json; sourceTree = "<group>"; };
 		4848A70B2777884A00BA19EA /* hiyori_pro_t10.model3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_pro_t10.model3.json; sourceTree = "<group>"; };
 		4848A70C2777884A00BA19EA /* hiyori_pro_t10.physics3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_pro_t10.physics3.json; sourceTree = "<group>"; };
+		485BE88B27788EF40074A80E /* Live2DVC+TapInfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Live2DVC+TapInfoButton.swift"; sourceTree = "<group>"; };
 		48A290482778333D00C07E71 /* UseLive2dOnMac.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = UseLive2dOnMac.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -577,10 +579,10 @@
 			isa = PBXGroup;
 			children = (
 				483E28A2277766B500D53495 /* AppDelegate.swift */,
-				483E28A6277766B500D53495 /* ViewController.swift */,
-				4848A6E127777C8800BA19EA /* ContentUpdater.swift */,
-				4848A6DF27777C8300BA19EA /* SettingController.swift */,
-				4848A6E327777C8C00BA19EA /* Settings.swift */,
+				483E28A6277766B500D53495 /* Live2DVC.swift */,
+				4848A6E127777C8800BA19EA /* Live2DViewUpdater.swift */,
+				485BE88B27788EF40074A80E /* Live2DVC+TapInfoButton.swift */,
+				485BE88D277890030074A80E /* Settings */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -623,6 +625,15 @@
 				4848A7082777884A00BA19EA /* hiyori_m03.motion3.json */,
 			);
 			path = motion;
+			sourceTree = "<group>";
+		};
+		485BE88D277890030074A80E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4848A6DF27777C8300BA19EA /* SettingController.swift */,
+				4848A6E327777C8C00BA19EA /* Settings.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -736,9 +747,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4848A6E027777C8300BA19EA /* SettingController.swift in Sources */,
-				483E28A7277766B500D53495 /* ViewController.swift in Sources */,
+				485BE88C27788EF40074A80E /* Live2DVC+TapInfoButton.swift in Sources */,
+				483E28A7277766B500D53495 /* Live2DVC.swift in Sources */,
 				483E28A3277766B500D53495 /* AppDelegate.swift in Sources */,
-				4848A6E227777C8800BA19EA /* ContentUpdater.swift in Sources */,
+				4848A6E227777C8800BA19EA /* Live2DViewUpdater.swift in Sources */,
 				4848A6E427777C8C00BA19EA /* Settings.swift in Sources */,
 				4848A6DD2777771000BA19EA /* Live2D-binding.mm in Sources */,
 			);

@@ -10,7 +10,7 @@
         <!--GLKit View Controller-->
         <scene sceneID="Adv-8x-Qok">
             <objects>
-                <glkViewController preferredFramesPerSecond="30" id="ImV-8B-zDa" customClass="ViewController" customModule="ExARLive2D" customModuleProvider="target" sceneMemberID="viewController">
+                <glkViewController preferredFramesPerSecond="30" id="ImV-8B-zDa" customClass="Live2DViewController" customModule="ExARLive2D" customModuleProvider="target" sceneMemberID="viewController">
                     <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" drawableDepthFormat="24" enableSetNeedsDisplay="NO" id="wfU-ON-tyV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,7 +34,7 @@
                         </connections>
                     </glkView>
                     <connections>
-                        <outlet property="sceneView" destination="X4I-Pw-cti" id="bbt-iA-lrp"/>
+                        <outlet property="frontARSceneView" destination="X4I-Pw-cti" id="bbt-iA-lrp"/>
                     </connections>
                 </glkViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l75-DI-1xe" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -1,23 +1,26 @@
 import ARKit
 import GLKit
-import ReplayKit
+
 import SceneKit
 import UIKit
 
-class ViewController: GLKViewController {
+class Live2DViewController: GLKViewController {
     // MARK: - Properties
 
-    let contentUpdater = ContentUpdater()
-    let controller = RPBroadcastController()
+    let live2DViewUpdater = Live2DViewUpdater()
 
-    // Front View
-    @IBOutlet var sceneView: ARSCNView!
-    var session: ARSession {
-        return sceneView.session
+    /// Front View
+    @IBOutlet var frontARSceneView: ARSCNView!
+
+    /// arSesion
+    var arSession: ARSession {
+        return frontARSceneView.session
     }
 
     var live2DModel: Live2DModelOpenGL!
-    var context: EAGLContext!
+
+    var live2DView: EAGLContext!
+
     var lastFrame: TimeInterval = 0.0
 
     // MARK: - View Controller Life Cycle
@@ -25,21 +28,25 @@ class ViewController: GLKViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        sceneView.delegate = contentUpdater
-        sceneView.session.delegate = self
-        sceneView.automaticallyUpdatesLighting = true
+        frontARSceneView.delegate = live2DViewUpdater
+        frontARSceneView.session.delegate = self
 
-        context = EAGLContext(api: .openGLES2)
-        if context == nil {
+        frontARSceneView.automaticallyUpdatesLighting = true
+
+        // MARK: set live2dView
+
+        live2DView = EAGLContext(api: .openGLES2)
+        if live2DView == nil {
             print("Failed to create ES context")
             return
         }
-
         guard let view = self.view as? GLKView else {
             print("Failed to cast view to GLKView")
             return
         }
-        view.context = context
+        view.context = live2DView
+
+        // MARK: set OpenGL
 
         setupGL()
     }
@@ -56,17 +63,17 @@ class ViewController: GLKViewController {
             view = nil
             tearDownGL()
 
-            if EAGLContext.current() == context {
+            if EAGLContext.current() == live2DView {
                 EAGLContext.setCurrent(nil)
             }
-            context = nil
+            live2DView = nil
         }
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
-        session.pause()
+        arSession.pause()
     }
 
     // allow app-defined gestures to take precedence over the system gestures
@@ -82,99 +89,28 @@ class ViewController: GLKViewController {
         super.didReceiveMemoryWarning()
     }
 
-    // MARK: - Utility
-
-    func errorString(_ error: Error) -> String {
-        let errorWithInfo = error as NSError
-        let messages = [
-            errorWithInfo.localizedDescription,
-            errorWithInfo.localizedFailureReason,
-            errorWithInfo.localizedRecoverySuggestion,
-        ]
-        let errorMessage = messages.compactMap { $0 }.joined(separator: "\n")
-        return errorMessage
-    }
-
     // MARK: - Instance Life Cycle
 
     deinit {
         self.tearDownGL()
-        if EAGLContext.current() == self.context {
+        if EAGLContext.current() == self.live2DView {
             EAGLContext.setCurrent(nil)
         }
-        self.context = nil
+        self.live2DView = nil
     }
-
-    // MARK: - Gesture action
-
-    @IBAction func tapInfoButton(_ sender: UIButton) {
-//        let liveBroadcast = UIAlertAction(title: controller.isBroadcasting ? "Stop Broadcast" : "Live Broadcast", style: .default, handler: { _ in
-//            if self.controller.isBroadcasting {
-//                self.stopBroadcast()
-//            } else {
-//                self.startBroadcast()
-//            }
-//        })
-
-        let toggleSceneView = UIAlertAction(title: sceneView.isHidden ? "Show Front View" : "Hide Front View", style: .default, handler: { _ in
-            self.sceneView.isHidden.toggle()
-        })
-
-        let setting = UIAlertAction(title: "Settings", style: .default, handler: { _ in
-            let settingsModal = SettingController()
-            settingsModal.modalTransitionStyle = .crossDissolve
-            self.present(settingsModal, animated: true, completion: nil)
-        })
-
-        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-//        actionSheet.addAction(liveBroadcast)
-        actionSheet.addAction(toggleSceneView)
-        actionSheet.addAction(setting)
-
-        actionSheet.addAction(UIAlertAction(title: "Cacnel", style: .cancel, handler: nil))
-
-        actionSheet.popoverPresentationController?.sourceView = sender
-
-        show(actionSheet, sender: self)
-    }
-
-    // MARK: - ReplayKit Live broadcasting
-
-//    func startBroadcast() {
-//        RPScreenRecorder.shared().isMicrophoneEnabled = true // Not work?
-//        RPBroadcastActivityViewController.load { broadcastAVC, error in
-//            if error != nil {
-//                print("Load BroadcastActivityViewController failed. ::" + self.errorString(error!))
-//                return
-//            }
-//            if let broadcastAVC = broadcastAVC {
-//                broadcastAVC.delegate = self
-//                self.present(broadcastAVC, animated: true, completion: nil)
-//            }
-//        }
-//    }
-//
-//    func stopBroadcast() {
-//        controller.finishBroadcast { error in
-//            if error != nil {
-//                print("Finish broadcast failed. ::" + self.errorString(error!))
-//                return
-//            }
-//        }
-//    }
 
     /// - Tag: ARFaceTrackingSetup
     func resetTracking() {
         guard ARFaceTrackingConfiguration.isSupported else { return }
         let configuration = ARFaceTrackingConfiguration()
         configuration.isLightEstimationEnabled = true
-        session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+        arSession.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
 
     // MARK: - Live2D OpenGL setup
 
     func setupGL() {
-        EAGLContext.setCurrent(context)
+        EAGLContext.setCurrent(live2DView)
 
         Live2DCubism.initL2D()
         print(Live2DCubism.live2DVersion() ?? "cannot get Live2DCubism.live2DVersion")
@@ -187,7 +123,7 @@ class ViewController: GLKViewController {
         }
 
         live2DModel = Live2DModelOpenGL(jsonPath: jsonPath)
-        contentUpdater.live2DModel = live2DModel
+        live2DViewUpdater.live2dModel = live2DModel
 
         for index in 0 ..< live2DModel.getNumberOfTextures() {
             let fileName = live2DModel.getFileName(ofTexture: index)!
@@ -228,7 +164,7 @@ class ViewController: GLKViewController {
     func tearDownGL() {
         live2DModel = nil
         Live2DCubism.dispose()
-        EAGLContext.setCurrent(context)
+        EAGLContext.setCurrent(live2DView)
     }
 
     // MARK: - GLKViewDelegate
@@ -286,7 +222,7 @@ class ViewController: GLKViewController {
 
 // MARK: - ARSessionDelegate
 
-extension ViewController: ARSessionDelegate {
+extension Live2DViewController: ARSessionDelegate {
     func session(_: ARSession, didFailWithError error: Error) {
         guard error is ARError else { return }
 
@@ -311,24 +247,3 @@ extension ViewController: ARSessionDelegate {
         }
     }
 }
-
-// MARK: - RPBroadcastActivityViewControllerDelegate
-
-// extension ViewController: RPBroadcastActivityViewControllerDelegate {
-//    func broadcastActivityViewController(_ broadcastActivityViewController: RPBroadcastActivityViewController, didFinishWith broadcastController: RPBroadcastController?, error: Error?) {
-//        if error != nil {
-//            broadcastActivityViewController.dismiss(animated: false, completion: nil)
-//            print("Set broadcast controller failed. ::" + errorString(error!))
-//            return
-//        }
-//
-//        broadcastActivityViewController.dismiss(animated: true) {
-//            broadcastController?.startBroadcast { error in
-//                if error != nil {
-//                    print("Start broadcast failed. ::" + self.errorString(error!))
-//                    return
-//                }
-//            }
-//        }
-//    }
-// }
