@@ -9,6 +9,8 @@ class ViewController: GLKViewController {
 
     let contentUpdater = ContentUpdater()
     let controller = RPBroadcastController()
+
+    // Front View
     @IBOutlet var sceneView: ARSCNView!
     var session: ARSession {
         return sceneView.session
@@ -45,6 +47,7 @@ class ViewController: GLKViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
+        // avert system sleep after long-time no operation
         UIApplication.shared.isIdleTimerDisabled = true
 
         resetTracking()
@@ -66,8 +69,11 @@ class ViewController: GLKViewController {
         session.pause()
     }
 
+    // allow app-defined gestures to take precedence over the system gestures
     override var preferredScreenEdgesDeferringSystemGestures: UIRectEdge {
-        return .bottom
+        // .bottom: don't return to destop or show mission control when user slides up from the bottom
+        // .top: don't show notification center and control center when user sildes down from the top
+        return [.bottom, .top]
     }
 
     // MARK: - Memory Management
@@ -115,10 +121,12 @@ class ViewController: GLKViewController {
         })
 
         let setting = UIAlertAction(title: "Settings", style: .default, handler: { _ in
-            self.present(SettingController(), animated: false, completion: nil)
+            let settingsModal = SettingController()
+            settingsModal.modalTransitionStyle = .crossDissolve
+            self.present(settingsModal, animated: true, completion: nil)
         })
 
-        let actionSheet = UIAlertController(title: "Option", message: nil, preferredStyle: .actionSheet)
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         actionSheet.addAction(liveBroadcast)
         actionSheet.addAction(toggleSceneView)
         actionSheet.addAction(setting)
@@ -169,6 +177,7 @@ class ViewController: GLKViewController {
         EAGLContext.setCurrent(context)
 
         Live2DCubism.initL2D()
+        print(Live2DCubism.live2DVersion() ?? "cannot get Live2DCubism.live2DVersion")
 
         let jsonFile = "hiyori_pro_t10.model3"
 

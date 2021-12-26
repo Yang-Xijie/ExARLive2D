@@ -221,11 +221,12 @@ class SettingController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
 
-    // MARK: - layout
-
     override func viewDidLoad() {
         super.viewDidLoad()
+
         updateInfo()
+
+        // MARK: - layout
 
         zoomTitleLabel.widthAnchor.constraint(equalToConstant: 80.0).isActive = true
         let zoomStackView = UIStackView(arrangedSubviews: [zoomTitleLabel, setZoomSlider])
@@ -261,6 +262,8 @@ class SettingController: UIViewController {
         subStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -24.0).isActive = true
         subStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0.0).isActive = true
         subStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0.0).isActive = true
+
+        // MARK: - Other Settings
     }
 }
 

@@ -29,3 +29,9 @@ If you want to use the live2d model to stream on Mac, just set the background to
 `SDK tutorials` https://docs.live2d.com/cubism-sdk-tutorials/top/?locale=en_us
 
 Download `Live2D SDK for Native` https://www.live2d.com/en/download/cubism-sdk/download-native/
+
+`Cubism Core API reference (jp or en)` https://docs.live2d.com/cubism-sdk-manual/cubism-core-api-reference/
+- Target
+    - Users of Live2D Cubism SDK
+    - Those who are considering embedding wrapper to call Core from other languages such as Java and Python
+    - Those who are considering embedding into other programs or platform such as game engines.

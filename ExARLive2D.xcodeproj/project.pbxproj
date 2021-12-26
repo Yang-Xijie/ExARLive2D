@@ -578,8 +578,8 @@
 			children = (
 				483E28A2277766B500D53495 /* AppDelegate.swift */,
 				483E28A6277766B500D53495 /* ViewController.swift */,
-				4848A6DF27777C8300BA19EA /* SettingController.swift */,
 				4848A6E127777C8800BA19EA /* ContentUpdater.swift */,
+				4848A6DF27777C8300BA19EA /* SettingController.swift */,
 				4848A6E327777C8C00BA19EA /* Settings.swift */,
 			);
 			path = App;
