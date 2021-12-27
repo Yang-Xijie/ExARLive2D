@@ -25,8 +25,8 @@ class Live2DViewController: GLKViewController {
 
     var live2DModel: Live2DModelOpenGL!
 
-    /// time stamp of the last frame (in seconds)
-    var lastFrameTimeStamp: TimeInterval = 0.0
+    /// time stamp of the previous frame (in seconds)
+    var timeStampOfPreviousFrame: TimeInterval = Date().timeIntervalSince1970
 
     // MARK: - View Life Cycle
 
@@ -84,37 +84,5 @@ class Live2DViewController: GLKViewController {
             EAGLContext.setCurrent(nil)
         }
         self.live2DView = nil
-    }
-
-    // MARK: - GLKViewDelegate
-
-    override func glkView(_: GLKView, drawIn _: CGRect) {
-        setupSizeAndPositionOfLive2DModel()
-
-        let r = UserDefaults.standard.integer(forKey: SETTINGS.key.RED)
-        let g = UserDefaults.standard.integer(forKey: SETTINGS.key.GREEN)
-        let b = UserDefaults.standard.integer(forKey: SETTINGS.key.BLUE)
-
-        glClearColor(Float(r) / 255, Float(g) / 255, Float(b) / 255, 1.0)
-        glClear(GLbitfield(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT))
-
-        let delta = UpdateFrame()
-        live2DModel.updatePhysics(Float(delta))
-
-
-
-        live2DModel.update()
-        live2DModel.draw()
-    }
-
-    // MARK: - Frame Update
-
-    
-    /// update rendering a frame
-    func UpdateFrame() -> TimeInterval {
-        let now = Date().timeIntervalSince1970
-        let deltaTime = now - lastFrameTimeStamp
-        lastFrameTimeStamp = now
-        return deltaTime
     }
 }

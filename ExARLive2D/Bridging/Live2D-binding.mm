@@ -156,9 +156,9 @@ static Allocator _allocator;
 
 - (void)setParam:(NSString *)paramId value:(Float32)value {
 	// example: use `ParamAngleY` to find the cid`ParamAngleY`
-    const CubismId* cid = CubismFramework::GetIdManager()->GetId((const char*)[paramId UTF8String]);
-    int a = _userModel->GetModel()->GetParameterIndex(cid);
-	printf("%d, setParam(): cid %s\n", a, cid->GetString().GetRawString() );
+	const CubismId* cid = CubismFramework::GetIdManager()->GetId((const char*)[paramId UTF8String]);
+//    int a = _userModel->GetModel()->GetParameterIndex(cid);
+//	  printf("%d, setParam(): cid %s\n", a, cid->GetString().GetRawString() );
 	_userModel->GetModel()->SetParameterValue(cid, value);
 }
 
@@ -166,26 +166,11 @@ static Allocator _allocator;
 	int partCount = _userModel->GetModel()->GetPartCount();
 	int parameterCount = _userModel->GetModel()->GetParameterCount();
 	printf("partCount = %d, parameterCount = %d\n", partCount, parameterCount);
-//    _userModel->GetModel()->_parameterIds
-//    Cubism::Framework::C
 
-//    const csmChar** parameterIds = Csm::Core::csmGetParameterIds(_model);
-//
-//    const csmInt32  parameterCount = Core::csmGetParameterCount(_model);
-
-//    _userModel->GetModel()->csmGetParameterIds();
-//    int a = _userModel->GetModel()->GetParameterIndex(<#CubismIdHandle parameterId#>);
-//    _userModel->GetModel()
-//    const csmModel* a  = _userModel->GetModel();
-//    csmGetParameterIds(<#const csmModel *model#>)
-//    parameterid
-	for (int i = 0; i<= parameterCount-1; i++) {
-//        _userModel->GetModel()->GetParameterIndex(<#CubismIdHandle parameterId#>)
-
+	for (int i = 0; i <= parameterCount - 1; i++) {
 		float maximumValue = _userModel->GetModel()->GetParameterMaximumValue(i);
 		float minimumValue = _userModel->GetModel()->GetParameterMinimumValue(i);
 		float defaultValue = _userModel->GetModel()->GetParameterDefaultValue(i);
-
 		printf("(%.2f, %.2f, %.2f)\n",minimumValue, defaultValue, maximumValue);
 	}
 
