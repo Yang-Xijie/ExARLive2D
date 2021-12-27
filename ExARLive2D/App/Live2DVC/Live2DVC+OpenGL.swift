@@ -33,7 +33,7 @@ extension Live2DViewController {
 
         self.setupSizeAndPositionOfLive2DModel()
 
-        _ = updateFrame()
+        _ = UpdateFrame()
     }
 
     func tearDownGL() {

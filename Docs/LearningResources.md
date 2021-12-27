@@ -41,6 +41,13 @@ Download `Live2D SDK for Native` https://www.live2d.com/en/download/cubism-sdk/d
     - Users of Live2D Cubism SDK
     - Those who are considering embedding wrapper to call Core from other languages such as Java and Python
     - Those who are considering embedding into other programs or platform such as game engines.
+- no use for common user... Core is invisible if you just use the framework.
+
+https://docs.live2d.com/cubism-editor-manual/palametor/?locale=en_us
+
+https://docs.live2d.com/cubism-editor-manual/standard-parametor-list/?locale=ja
+
+https://docs.live2d.com/cubism-sdk-manual/parameters/
 
 # Use C++ Codes in Live2D in Swift
 

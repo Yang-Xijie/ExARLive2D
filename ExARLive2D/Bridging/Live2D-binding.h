@@ -25,6 +25,7 @@
 - (void)updatePhysics:(Float32)delta;
 - (void)update;
 - (void)draw;
+- (void)yxjtest;
 
 @property (nonatomic, copy) NSString *modelPath;
 @property (nonatomic, strong) NSArray<NSString *> *texturePaths;

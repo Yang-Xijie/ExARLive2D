@@ -503,17 +503,17 @@
 		483E294F27776C0100D53495 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				483E295027776C0100D53495 /* CubismModelUserData.cpp */,
 				483E295127776C0100D53495 /* CMakeLists.txt */,
+				483E295927776C0100D53495 /* CubismModelUserData.hpp */,
+				483E295027776C0100D53495 /* CubismModelUserData.cpp */,
+				483E295A27776C0100D53495 /* CubismModelUserDataJson.hpp */,
 				483E295227776C0100D53495 /* CubismModelUserDataJson.cpp */,
-				483E295327776C0100D53495 /* CubismUserModel.cpp */,
+				483E295727776C0100D53495 /* CubismMoc.hpp */,
 				483E295427776C0100D53495 /* CubismMoc.cpp */,
 				483E295527776C0100D53495 /* CubismModel.hpp */,
-				483E295627776C0100D53495 /* CubismUserModel.hpp */,
-				483E295727776C0100D53495 /* CubismMoc.hpp */,
 				483E295827776C0100D53495 /* CubismModel.cpp */,
-				483E295927776C0100D53495 /* CubismModelUserData.hpp */,
-				483E295A27776C0100D53495 /* CubismModelUserDataJson.hpp */,
+				483E295627776C0100D53495 /* CubismUserModel.hpp */,
+				483E295327776C0100D53495 /* CubismUserModel.cpp */,
 			);
 			path = Model;
 			sourceTree = "<group>";

@@ -25,7 +25,8 @@ class Live2DViewController: GLKViewController {
 
     var live2DModel: Live2DModelOpenGL!
 
-    var lastFrame: TimeInterval = 0.0
+    /// time stamp of the last frame (in seconds)
+    var lastFrameTimeStamp: TimeInterval = 0.0
 
     // MARK: - View Life Cycle
 
@@ -97,10 +98,10 @@ class Live2DViewController: GLKViewController {
         glClearColor(Float(r) / 255, Float(g) / 255, Float(b) / 255, 1.0)
         glClear(GLbitfield(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT))
 
-        let delta = updateFrame()
+        let delta = UpdateFrame()
         live2DModel.updatePhysics(Float(delta))
 
-        live2DModel.setParam("ParamBreath", value: Float32((cos(lastFrame) + 1.0) / 2.0))
+
 
         live2DModel.update()
         live2DModel.draw()
@@ -108,10 +109,12 @@ class Live2DViewController: GLKViewController {
 
     // MARK: - Frame Update
 
-    func updateFrame() -> TimeInterval {
+    
+    /// update rendering a frame
+    func UpdateFrame() -> TimeInterval {
         let now = Date().timeIntervalSince1970
-        let deltaTime = now - lastFrame
-        lastFrame = now
+        let deltaTime = now - lastFrameTimeStamp
+        lastFrameTimeStamp = now
         return deltaTime
     }
 }

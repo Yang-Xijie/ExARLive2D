@@ -6,6 +6,8 @@ class Live2DViewUpdater: NSObject, ARSCNViewDelegate {
 
     var live2dModel: Live2DModelOpenGL!
 
+//    var i = 0
+
     // MARK: - ARSCNViewDelegate
 
     /// - Tag: ARNodeTracking
@@ -50,6 +52,12 @@ class Live2DViewUpdater: NSObject, ARSCNViewDelegate {
         live2dModel.setParam("ParamMouthOpenY", value: jawOpen * 1.8)
         live2dModel.setParam("ParamMouthForm", value: 1 - mouthFunnel * 2)
 
-        live2dModel.setParam("ParamCheek", value: cheekPuff)
+//        live2dModel.setParam("ParamCheek", value: cheekPuff)
+//        live2dModel.setParam("ParamBreath", value: Float(cos(Double(i) * 3.0) + 1.0) / 2.0)
+        live2dModel.setParam("ParamCheek", value: 0) // default value [-1.0, 1.0]
+        
+//        live2dModel.yxjtest()
+//        print([i, Float(cos(Double(i) / 40.0) + 1.0) / 2.0])
+//        i = i + 1
     }
 }

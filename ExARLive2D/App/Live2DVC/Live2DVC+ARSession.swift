@@ -9,9 +9,16 @@ import UIKit
 extension Live2DViewController: ARSessionDelegate {
     /// ARFaceTrackingSetup
     func setupARFaceTracking() {
+        // check if the device supports ARFaceTracking
         guard ARFaceTrackingConfiguration.isSupported else { return }
+
         let configuration = ARFaceTrackingConfiguration()
-        configuration.isLightEstimationEnabled = true
+        // When you enable the `isLightEstimationEnabled` setting, a face-tracking configuration estimates directional and environmental lighting (an `ARDirectionalLightEstimate` object) by referring to the detected face as a light probe. [no need for now]
+        // true: CPU 51% Memory 164MB
+        // false: CPU 45% Memory 178MB
+        configuration.isLightEstimationEnabled = false
+        configuration.maximumNumberOfTrackedFaces = 1 // default value is one
+
         arSession.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
 
