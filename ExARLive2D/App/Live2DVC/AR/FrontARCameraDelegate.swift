@@ -1,12 +1,12 @@
 import ARKit
 import SceneKit
 
-class Live2DViewUpdater: NSObject, ARSCNViewDelegate {
+class FrontARCameraDelegate: NSObject, ARSCNViewDelegate {
     // MARK: - Properties
 
     var live2dModel: Live2DModelOpenGL!
 
-//    var i = 0
+    private var timeofcurrent = Date().timeIntervalSince1970
 
     // MARK: - ARSCNViewDelegate
 
@@ -55,9 +55,10 @@ class Live2DViewUpdater: NSObject, ARSCNViewDelegate {
 //        live2dModel.setParam("ParamCheek", value: cheekPuff)
 //        live2dModel.setParam("ParamBreath", value: Float(cos(Double(i) * 3.0) + 1.0) / 2.0)
         live2dModel.setParam("ParamCheek", value: 0) // default value [-1.0, 1.0]
-        
+
+//        print(Date().timeIntervalSince1970 - timeofcurrent) // 0.0166s
+        timeofcurrent = Date().timeIntervalSince1970
+
 //        live2dModel.yxjtest()
-//        print([i, Float(cos(Double(i) / 40.0) + 1.0) / 2.0])
-//        i = i + 1
     }
 }

@@ -7,20 +7,20 @@ import UIKit
 class Live2DViewController: GLKViewController {
     // MARK: - Properties
 
-    // MARK: - views
+    // MARK: views
 
     /// front camera view
-    @IBOutlet var frontARSceneView: ARSCNView!
+    @IBOutlet var frontARCameraView: ARSCNView!
 
     /// live2D view behind
     var live2DView: EAGLContext!
 
     // MARK: AR
 
-    let live2DViewUpdater = Live2DViewUpdater()
+    let frontARCameraDelegate = FrontARCameraDelegate()
 
     var arSession: ARSession {
-        return frontARSceneView.session
+        return frontARCameraView.session
     }
 
     // MARK: others
@@ -35,12 +35,12 @@ class Live2DViewController: GLKViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        frontARSceneView.delegate = live2DViewUpdater
-        frontARSceneView.session.delegate = self
+        // MARK: setup `frontARCameraView`
 
-        frontARSceneView.automaticallyUpdatesLighting = true
+        frontARCameraView.delegate = frontARCameraDelegate
+        frontARCameraView.session.delegate = self
 
-        // MARK: set live2dView
+        // MARK: setup `live2DView`
 
         live2DView = EAGLContext(api: .openGLES2)
         if live2DView == nil {
@@ -53,12 +53,16 @@ class Live2DViewController: GLKViewController {
         }
         view.context = live2DView
 
-        // MARK: setup live2d model
+        // MARK: setup `live2DModel`
 
-        setupGL()
+        SetupLive2DModel()
+
+        // MARK: setup `frontARCameraDelegate`
+
+        frontARCameraDelegate.live2dModel = live2DModel
     }
 
-    private func setupGL() {
+    private func SetupLive2DModel() {
         EAGLContext.setCurrent(live2DView)
 
         Live2DCubism.initL2D()
@@ -72,7 +76,6 @@ class Live2DViewController: GLKViewController {
         }
 
         live2DModel = Live2DModelOpenGL(jsonPath: jsonPath)
-        live2DViewUpdater.live2dModel = live2DModel
 
         for index in 0 ..< live2DModel.getNumberOfTextures() {
             let fileName = live2DModel.getFileName(ofTexture: index)!
@@ -93,7 +96,10 @@ class Live2DViewController: GLKViewController {
 
         if isViewLoaded, view.window == nil {
             view = nil
-            tearDownGL()
+
+            live2DModel = nil
+            Live2DCubism.dispose()
+            EAGLContext.setCurrent(live2DView)
 
             if EAGLContext.current() == live2DView {
                 EAGLContext.setCurrent(nil)
@@ -110,14 +116,11 @@ class Live2DViewController: GLKViewController {
         arSession.pause()
     }
 
-    func tearDownGL() {
+    deinit {
         live2DModel = nil
         Live2DCubism.dispose()
         EAGLContext.setCurrent(live2DView)
-    }
 
-    deinit {
-        self.tearDownGL()
         if EAGLContext.current() == self.live2DView {
             EAGLContext.setCurrent(nil)
         }

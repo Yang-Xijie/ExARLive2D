@@ -51,7 +51,7 @@
 		4848A6D92777763900BA19EA /* liblive2d-lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 483E28C827776B9B00D53495 /* liblive2d-lib.a */; };
 		4848A6DD2777771000BA19EA /* Live2D-binding.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4848A6DC2777771000BA19EA /* Live2D-binding.mm */; };
 		4848A6E027777C8300BA19EA /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4848A6DF27777C8300BA19EA /* SettingsController.swift */; };
-		4848A6E227777C8800BA19EA /* Live2DViewUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4848A6E127777C8800BA19EA /* Live2DViewUpdater.swift */; };
+		4848A6E227777C8800BA19EA /* FrontARCameraDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4848A6E127777C8800BA19EA /* FrontARCameraDelegate.swift */; };
 		4848A6E427777C8C00BA19EA /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4848A6E327777C8C00BA19EA /* Settings.swift */; };
 		4848A6F227777D3E00BA19EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4848A6F127777D3E00BA19EA /* Main.storyboard */; };
 		4848A70D2777884A00BA19EA /* texture_00.png in Resources */ = {isa = PBXBuildFile; fileRef = 4848A6FB2777884A00BA19EA /* texture_00.png */; };
@@ -213,7 +213,7 @@
 		4848A6DC2777771000BA19EA /* Live2D-binding.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "Live2D-binding.mm"; sourceTree = "<group>"; };
 		4848A6DE277777C100BA19EA /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		4848A6DF27777C8300BA19EA /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
-		4848A6E127777C8800BA19EA /* Live2DViewUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Live2DViewUpdater.swift; sourceTree = "<group>"; };
+		4848A6E127777C8800BA19EA /* FrontARCameraDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontARCameraDelegate.swift; sourceTree = "<group>"; };
 		4848A6E327777C8C00BA19EA /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		4848A6F127777D3E00BA19EA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4848A6F527777F6000BA19EA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -265,7 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				489B1B712778982500655A65 /* Live2DVC+ARSession.swift */,
-				4848A6E127777C8800BA19EA /* Live2DViewUpdater.swift */,
+				4848A6E127777C8800BA19EA /* FrontARCameraDelegate.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -778,7 +778,7 @@
 				485BE88C27788EF40074A80E /* Live2DVC+TapInfoButton.swift in Sources */,
 				483E28A7277766B500D53495 /* Live2DVC.swift in Sources */,
 				483E28A3277766B500D53495 /* AppDelegate.swift in Sources */,
-				4848A6E227777C8800BA19EA /* Live2DViewUpdater.swift in Sources */,
+				4848A6E227777C8800BA19EA /* FrontARCameraDelegate.swift in Sources */,
 				4856F7D12779B8CC00F1F8CE /* Live2DVC+UpdateGLKView.swift in Sources */,
 				489B1B6D2778956800655A65 /* Live2DVC+Configuration.swift in Sources */,
 				489B1B722778982500655A65 /* Live2DVC+ARSession.swift in Sources */,

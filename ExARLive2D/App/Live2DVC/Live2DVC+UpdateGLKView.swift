@@ -18,7 +18,7 @@ extension Live2DViewController {
 
         // get time intercal to update physics (in seconds)
         let deltaTimeInterval = Date().timeIntervalSince1970 - timeStampOfPreviousFrame // The first frame may not be correct
-//        print(deltaTimeInterval) // FIXME: why only 30 fps??? 0.033
+//        print(deltaTimeInterval) // FIXME: why only 30 fps??? 0.033s AR render is 0.0166s
         live2DModel.updatePhysics(Float(deltaTimeInterval))
         timeStampOfPreviousFrame = Date().timeIntervalSince1970
 

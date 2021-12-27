@@ -6,8 +6,8 @@ import Foundation
 
 extension Live2DViewController {
     @IBAction func tapInfoButton(_ sender: UIButton) {
-        let toggleFrontViewAction = UIAlertAction(title: frontARSceneView.isHidden ? "Show Front View" : "Hide Front View", style: .default, handler: { _ in
-            self.frontARSceneView.isHidden.toggle()
+        let toggleFrontViewAction = UIAlertAction(title: frontARCameraView.isHidden ? "Show Front View" : "Hide Front View", style: .default, handler: { _ in
+            self.frontARCameraView.isHidden.toggle()
         })
 
         let openSettingsAction = UIAlertAction(title: "Settings", style: .default, handler: { _ in
