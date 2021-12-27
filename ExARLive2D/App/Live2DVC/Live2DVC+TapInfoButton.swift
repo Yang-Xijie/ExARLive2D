@@ -1,5 +1,3 @@
-// Live2DVC+TapInfoButton.swift
-
 import Foundation
 
 // MARK: - More Operations
@@ -11,7 +9,7 @@ extension Live2DViewController {
         })
 
         let openSettingsAction = UIAlertAction(title: "Settings", style: .default, handler: { _ in
-            let settingsModal = SettingsController()
+            let settingsModal = UserSettingsViewController()
             settingsModal.modalTransitionStyle = .coverVertical
             settingsModal.modalPresentationStyle = .pageSheet
             self.present(settingsModal, animated: true, completion: nil)

@@ -1,4 +1,5 @@
 import Foundation
+
 extension Live2DViewController {
     // MARK: - update GLKView
 
@@ -7,9 +8,9 @@ extension Live2DViewController {
 
         // MARK: background color
 
-        let r = UserDefaults.standard.integer(forKey: SETTINGS.key.RED)
-        let g = UserDefaults.standard.integer(forKey: SETTINGS.key.GREEN)
-        let b = UserDefaults.standard.integer(forKey: SETTINGS.key.BLUE)
+        let r = UserDefaults.standard.integer(forKey: USER_SETTINGS.key.RED)
+        let g = UserDefaults.standard.integer(forKey: USER_SETTINGS.key.GREEN)
+        let b = UserDefaults.standard.integer(forKey: USER_SETTINGS.key.BLUE)
 
         glClearColor(Float(r) / 255, Float(g) / 255, Float(b) / 255, 1.0)
         glClear(GLbitfield(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT))
@@ -29,9 +30,9 @@ extension Live2DViewController {
     private func updateSizeAndPositionOfLive2DModel() {
         let size = UIScreen.main.bounds.size
 
-        let zoom: Float = UserDefaults.standard.float(forKey: SETTINGS.key.ZOOM)
-        let x: Float = UserDefaults.standard.float(forKey: SETTINGS.key.X)
-        let y: Float = UserDefaults.standard.float(forKey: SETTINGS.key.Y)
+        let zoom: Float = UserDefaults.standard.float(forKey: USER_SETTINGS.key.ZOOM)
+        let x: Float = UserDefaults.standard.float(forKey: USER_SETTINGS.key.X)
+        let y: Float = UserDefaults.standard.float(forKey: USER_SETTINGS.key.Y)
 
         let scx: Float = (Float)(5.6 / live2DModel.getCanvasWidth()) * zoom
         let scy: Float = (Float)(5.6 / live2DModel.getCanvasWidth() * (Float)(size.width / size.height)) * zoom

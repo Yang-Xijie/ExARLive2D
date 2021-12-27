@@ -1,5 +1,3 @@
-// Live2DVS+ARSession.swift
-
 import ARKit
 import Foundation
 import UIKit

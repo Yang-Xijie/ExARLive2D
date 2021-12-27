@@ -1,5 +1,3 @@
-// Live2DVC+Settings.swift
-
 import Foundation
 import UIKit
 

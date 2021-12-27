@@ -1,6 +1,6 @@
 import UIKit
 
-class SettingsController: UIViewController {
+class UserSettingsViewController: UIViewController {
     // MARK: - Background Color
 
     private let setBackgroundColorButton: UIButton = {
@@ -17,19 +17,19 @@ class SettingsController: UIViewController {
 
         alert.addTextField { textField in
             textField.placeholder = "Red"
-            textField.text = "\(defaults.integer(forKey: SETTINGS.key.RED))"
+            textField.text = "\(defaults.integer(forKey: USER_SETTINGS.key.RED))"
             textField.keyboardType = .numberPad
         }
 
         alert.addTextField { textField in
             textField.placeholder = "Green"
-            textField.text = "\(defaults.integer(forKey: SETTINGS.key.GREEN))"
+            textField.text = "\(defaults.integer(forKey: USER_SETTINGS.key.GREEN))"
             textField.keyboardType = .numberPad
         }
 
         alert.addTextField { textField in
             textField.placeholder = "Blue"
-            textField.text = "\(defaults.integer(forKey: SETTINGS.key.BLUE))"
+            textField.text = "\(defaults.integer(forKey: USER_SETTINGS.key.BLUE))"
             textField.keyboardType = .numberPad
         }
 
@@ -81,9 +81,9 @@ class SettingsController: UIViewController {
                 }
             }
 
-            defaults.set(r, forKey: SETTINGS.key.RED)
-            defaults.set(g, forKey: SETTINGS.key.GREEN)
-            defaults.set(b, forKey: SETTINGS.key.BLUE)
+            defaults.set(r, forKey: USER_SETTINGS.key.RED)
+            defaults.set(g, forKey: USER_SETTINGS.key.GREEN)
+            defaults.set(b, forKey: USER_SETTINGS.key.BLUE)
 
             self.DisplayInfo()
         }))
@@ -106,7 +106,7 @@ class SettingsController: UIViewController {
         let defaults = UserDefaults.standard
         let slider = UISlider()
         slider.maximumValue = 4
-        slider.value = defaults.float(forKey: SETTINGS.key.ZOOM)
+        slider.value = defaults.float(forKey: USER_SETTINGS.key.ZOOM)
         slider.minimumValue = 0
         slider.addTarget(self, action: #selector(handleSlideZoom), for: .valueChanged)
         return slider
@@ -114,7 +114,7 @@ class SettingsController: UIViewController {
 
     @objc private func handleSlideZoom() {
         let defaults = UserDefaults.standard
-        defaults.set(setZoomSlider.value, forKey: SETTINGS.key.ZOOM)
+        defaults.set(setZoomSlider.value, forKey: USER_SETTINGS.key.ZOOM)
         DisplayInfo()
     }
 
@@ -124,7 +124,7 @@ class SettingsController: UIViewController {
         let defaults = UserDefaults.standard
         let slider = UISlider()
         slider.maximumValue = 3
-        slider.value = defaults.float(forKey: SETTINGS.key.Y)
+        slider.value = defaults.float(forKey: USER_SETTINGS.key.Y)
         slider.minimumValue = -4
         slider.addTarget(self, action: #selector(handleYPos), for: .valueChanged)
         return slider
@@ -139,7 +139,7 @@ class SettingsController: UIViewController {
 
     @objc private func handleYPos() {
         let defaults = UserDefaults.standard
-        defaults.set(setYPositionSlider.value, forKey: SETTINGS.key.Y)
+        defaults.set(setYPositionSlider.value, forKey: USER_SETTINGS.key.Y)
         DisplayInfo()
     }
 
@@ -147,7 +147,7 @@ class SettingsController: UIViewController {
         let defaults = UserDefaults.standard
         let slider = UISlider()
         slider.maximumValue = 2
-        slider.value = defaults.float(forKey: SETTINGS.key.X)
+        slider.value = defaults.float(forKey: USER_SETTINGS.key.X)
         slider.minimumValue = -2
         slider.addTarget(self, action: #selector(handleXPos), for: .valueChanged)
         return slider
@@ -162,7 +162,7 @@ class SettingsController: UIViewController {
 
     @objc private func handleXPos() {
         let defaults = UserDefaults.standard
-        defaults.set(setXPositionSlider.value, forKey: SETTINGS.key.X)
+        defaults.set(setXPositionSlider.value, forKey: USER_SETTINGS.key.X)
         DisplayInfo()
     }
 
@@ -179,13 +179,13 @@ class SettingsController: UIViewController {
     }()
 
     private func GetInfo() -> String {
-        let r = UserDefaults.standard.integer(forKey: SETTINGS.key.RED)
-        let g = UserDefaults.standard.integer(forKey: SETTINGS.key.GREEN)
-        let b = UserDefaults.standard.integer(forKey: SETTINGS.key.BLUE)
+        let r = UserDefaults.standard.integer(forKey: USER_SETTINGS.key.RED)
+        let g = UserDefaults.standard.integer(forKey: USER_SETTINGS.key.GREEN)
+        let b = UserDefaults.standard.integer(forKey: USER_SETTINGS.key.BLUE)
 
-        let zoom = UserDefaults.standard.float(forKey: SETTINGS.key.ZOOM)
-        let y_pos = UserDefaults.standard.float(forKey: SETTINGS.key.X)
-        let x_pos = UserDefaults.standard.float(forKey: SETTINGS.key.Y)
+        let zoom = UserDefaults.standard.float(forKey: USER_SETTINGS.key.ZOOM)
+        let y_pos = UserDefaults.standard.float(forKey: USER_SETTINGS.key.X)
+        let x_pos = UserDefaults.standard.float(forKey: USER_SETTINGS.key.Y)
 
         let info = "R: \(r) G: \(g) B: \(b)\n\nZoom: \(String(format: "%.2f", zoom))\nX-Pos: \(String(format: "%.2f", y_pos))\nY-Pos: \(String(format: "%.2f", x_pos))\n"
         return info
@@ -211,7 +211,7 @@ class SettingsController: UIViewController {
             let pasteboard = UIPasteboard.general
             pasteboard.string = oldInfo
 
-            SETTINGS.setAllToDefaultValue()
+            USER_SETTINGS.setAllToDefaultValue()
 
             self.DisplayInfo()
         }))
@@ -269,7 +269,7 @@ class SettingsController: UIViewController {
     }
 }
 
-extension SettingsController {
+extension UserSettingsViewController {
     private func displayAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))

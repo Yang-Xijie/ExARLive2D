@@ -10,10 +10,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // MARK: initialize user settings
 
         // use user's settings if it is not first run
-        let isNotFirstRun = UserDefaults.standard.bool(forKey: SETTINGS.key.FIRST_RUN)
+        let isNotFirstRun = UserDefaults.standard.bool(forKey: USER_SETTINGS.key.FIRST_RUN)
         if !isNotFirstRun {
-            UserDefaults.standard.set(true, forKey: SETTINGS.key.FIRST_RUN)
-            SETTINGS.setAllToDefaultValue()
+            UserDefaults.standard.set(true, forKey: USER_SETTINGS.key.FIRST_RUN)
+            USER_SETTINGS.setAllToDefaultValue()
         }
 
         // MARK: app configuration
