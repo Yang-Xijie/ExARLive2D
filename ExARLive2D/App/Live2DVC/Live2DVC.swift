@@ -7,7 +7,7 @@ import UIKit
 class Live2DViewController: GLKViewController {
     // MARK: - Properties
 
-    /// Front View
+    /// front camera view
     @IBOutlet var frontARSceneView: ARSCNView!
 
     /// live2D view behind
@@ -27,7 +27,7 @@ class Live2DViewController: GLKViewController {
 
     var lastFrame: TimeInterval = 0.0
 
-    // MARK: - View Controller Life Cycle
+    // MARK: - View Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +58,7 @@ class Live2DViewController: GLKViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        resetTracking()
+        setupARFaceTracking()
 
         if isViewLoaded, view.window == nil {
             view = nil
@@ -77,62 +77,12 @@ class Live2DViewController: GLKViewController {
         arSession.pause()
     }
 
-    // MARK: - Instance Life Cycle
-
     deinit {
         self.tearDownGL()
         if EAGLContext.current() == self.live2DView {
             EAGLContext.setCurrent(nil)
         }
         self.live2DView = nil
-    }
-
-    /// - Tag: ARFaceTrackingSetup
-    func resetTracking() {
-        guard ARFaceTrackingConfiguration.isSupported else { return }
-        let configuration = ARFaceTrackingConfiguration()
-        configuration.isLightEstimationEnabled = true
-        arSession.run(configuration, options: [.resetTracking, .removeExistingAnchors])
-    }
-
-    // MARK: - Live2D OpenGL setup
-
-    func setupGL() {
-        EAGLContext.setCurrent(live2DView)
-
-        Live2DCubism.initL2D()
-        print(Live2DCubism.live2DVersion() ?? "cannot get Live2DCubism.live2DVersion")
-
-        let jsonFile = "hiyori_pro_t10.model3"
-
-        guard let jsonPath = Bundle.main.path(forResource: jsonFile, ofType: "json") else {
-            print("Failed to find model json file")
-            return
-        }
-
-        live2DModel = Live2DModelOpenGL(jsonPath: jsonPath)
-        live2DViewUpdater.live2dModel = live2DModel
-
-        for index in 0 ..< live2DModel.getNumberOfTextures() {
-            let fileName = live2DModel.getFileName(ofTexture: index)!
-            let filePath = Bundle.main.path(forResource: fileName, ofType: nil)!
-            let textureInfo = try! GLKTextureLoader.texture(withContentsOfFile: filePath, options: [GLKTextureLoaderApplyPremultiplication: false, GLKTextureLoaderGenerateMipmaps: true])
-
-            let num = textureInfo.name
-            live2DModel.setTexture(Int32(index), to: num)
-        }
-
-        live2DModel.setPremultipliedAlpha(true)
-
-        self.setupSizeAndPositionOfLive2DModel()
-
-        _ = updateFrame()
-    }
-
-    func tearDownGL() {
-        live2DModel = nil
-        Live2DCubism.dispose()
-        EAGLContext.setCurrent(live2DView)
     }
 
     // MARK: - GLKViewDelegate

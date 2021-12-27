@@ -71,10 +71,11 @@
 		4848A71B2777884A00BA19EA /* hiyori_pro_t10.cdi3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4848A70A2777884A00BA19EA /* hiyori_pro_t10.cdi3.json */; };
 		4848A71C2777884A00BA19EA /* hiyori_pro_t10.model3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4848A70B2777884A00BA19EA /* hiyori_pro_t10.model3.json */; };
 		4848A71D2777884A00BA19EA /* hiyori_pro_t10.physics3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4848A70C2777884A00BA19EA /* hiyori_pro_t10.physics3.json */; };
+		4856F7D12779B8CC00F1F8CE /* Live2DVC+OpenGL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4856F7D02779B8CC00F1F8CE /* Live2DVC+OpenGL.swift */; };
 		485BE88C27788EF40074A80E /* Live2DVC+TapInfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485BE88B27788EF40074A80E /* Live2DVC+TapInfoButton.swift */; };
 		489B1B6D2778956800655A65 /* Live2DVC+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489B1B6C2778956800655A65 /* Live2DVC+Configuration.swift */; };
 		489B1B702778980300655A65 /* Live2DVC+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489B1B6F2778980300655A65 /* Live2DVC+Position.swift */; };
-		489B1B722778982500655A65 /* Live2DVS+ARSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489B1B712778982500655A65 /* Live2DVS+ARSession.swift */; };
+		489B1B722778982500655A65 /* Live2DVC+ARSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489B1B712778982500655A65 /* Live2DVC+ARSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -233,10 +234,11 @@
 		4848A70A2777884A00BA19EA /* hiyori_pro_t10.cdi3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_pro_t10.cdi3.json; sourceTree = "<group>"; };
 		4848A70B2777884A00BA19EA /* hiyori_pro_t10.model3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_pro_t10.model3.json; sourceTree = "<group>"; };
 		4848A70C2777884A00BA19EA /* hiyori_pro_t10.physics3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiyori_pro_t10.physics3.json; sourceTree = "<group>"; };
+		4856F7D02779B8CC00F1F8CE /* Live2DVC+OpenGL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Live2DVC+OpenGL.swift"; sourceTree = "<group>"; };
 		485BE88B27788EF40074A80E /* Live2DVC+TapInfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Live2DVC+TapInfoButton.swift"; sourceTree = "<group>"; };
 		489B1B6C2778956800655A65 /* Live2DVC+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Live2DVC+Configuration.swift"; sourceTree = "<group>"; };
 		489B1B6F2778980300655A65 /* Live2DVC+Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Live2DVC+Position.swift"; sourceTree = "<group>"; };
-		489B1B712778982500655A65 /* Live2DVS+ARSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Live2DVS+ARSession.swift"; sourceTree = "<group>"; };
+		489B1B712778982500655A65 /* Live2DVC+ARSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Live2DVC+ARSession.swift"; sourceTree = "<group>"; };
 		48A290482778333D00C07E71 /* UseLive2DOnMac.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = UseLive2DOnMac.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -644,7 +646,8 @@
 			isa = PBXGroup;
 			children = (
 				483E28A6277766B500D53495 /* Live2DVC.swift */,
-				489B1B712778982500655A65 /* Live2DVS+ARSession.swift */,
+				4856F7D02779B8CC00F1F8CE /* Live2DVC+OpenGL.swift */,
+				489B1B712778982500655A65 /* Live2DVC+ARSession.swift */,
 				489B1B6F2778980300655A65 /* Live2DVC+Position.swift */,
 				489B1B6C2778956800655A65 /* Live2DVC+Configuration.swift */,
 				485BE88B27788EF40074A80E /* Live2DVC+TapInfoButton.swift */,
@@ -768,8 +771,9 @@
 				483E28A7277766B500D53495 /* Live2DVC.swift in Sources */,
 				483E28A3277766B500D53495 /* AppDelegate.swift in Sources */,
 				4848A6E227777C8800BA19EA /* Live2DViewUpdater.swift in Sources */,
+				4856F7D12779B8CC00F1F8CE /* Live2DVC+OpenGL.swift in Sources */,
 				489B1B6D2778956800655A65 /* Live2DVC+Configuration.swift in Sources */,
-				489B1B722778982500655A65 /* Live2DVS+ARSession.swift in Sources */,
+				489B1B722778982500655A65 /* Live2DVC+ARSession.swift in Sources */,
 				4848A6E427777C8C00BA19EA /* Settings.swift in Sources */,
 				489B1B702778980300655A65 /* Live2DVC+Position.swift in Sources */,
 				4848A6DD2777771000BA19EA /* Live2D-binding.mm in Sources */,

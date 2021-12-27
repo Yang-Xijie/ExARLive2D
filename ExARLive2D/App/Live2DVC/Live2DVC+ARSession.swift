@@ -7,6 +7,14 @@ import UIKit
 // MARK: - ARSessionDelegate
 
 extension Live2DViewController: ARSessionDelegate {
+    /// ARFaceTrackingSetup
+    func setupARFaceTracking() {
+        guard ARFaceTrackingConfiguration.isSupported else { return }
+        let configuration = ARFaceTrackingConfiguration()
+        configuration.isLightEstimationEnabled = true
+        arSession.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+    }
+
     func session(_: ARSession, didFailWithError error: Error) {
         guard error is ARError else { return }
 
@@ -27,7 +35,7 @@ extension Live2DViewController: ARSessionDelegate {
 
     func sessionInterruptionEnded(_: ARSession) {
         DispatchQueue.main.async {
-            self.resetTracking()
+            self.setupARFaceTracking()
         }
     }
 }

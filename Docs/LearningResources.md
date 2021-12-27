@@ -1,6 +1,6 @@
 # Learning Resources for Live2D
 
-# Apple Official Documents
+# Frameworks for Face Tracking - Apple
 
 ## Vision
 
@@ -14,7 +14,13 @@ https://developer.apple.com/documentation/arkit/content_anchors/tracking_and_vis
 
 `ARKit` uses true depth front camera to detect face model.
 
-# GitHub Project: ARKit-live2d
+## Face Tracking with ARKit (video)
+
+https://developer.apple.com/videos/play/tech-talks/601
+
+# GitHub Project
+
+## mzyy94/ARKit-Live2D
 
 https://github.com/mzyy94/ARKit-Live2D
 
@@ -35,3 +41,13 @@ Download `Live2D SDK for Native` https://www.live2d.com/en/download/cubism-sdk/d
     - Users of Live2D Cubism SDK
     - Those who are considering embedding wrapper to call Core from other languages such as Java and Python
     - Those who are considering embedding into other programs or platform such as game engines.
+
+# Use C++ Codes in Live2D in Swift
+
+Importing Objective-C into Swift
+
+https://developer.apple.com/documentation/swift/imported_c_and_objective-c_apis/importing_objective-c_into_swift
+
+How to consume C++ codes in Swift
+
+https://anuragajwani.medium.com/how-to-consume-c-code-in-swift-b4d64a04e989
